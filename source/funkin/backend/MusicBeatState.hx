@@ -56,14 +56,16 @@ class MusicBeatState extends FlxUIState
 			scriptName = stateName ?? '???';
 		}
 		
-		final scriptFile = FunkinScript.getPath('scripts/states/$scriptName');
-		if (scriptGroup.exists(scriptFile)) return true;
+		scriptGroup.scriptShareables.set('parent', this);
 		
 		this.scriptName = scriptName;
 		
+		final scriptFile = FunkinScript.getPath('scripts/states/$scriptName');
+		if (scriptGroup.exists(scriptFile)) return true;
+		
 		if (FunkinAssets.exists(scriptFile))
 		{
-			var newScript = FunkinScript.fromFile(scriptFile, scriptName);
+			var newScript = FunkinScript.fromFile(scriptFile, scriptName, scriptGroup.scriptShareables);
 			if (newScript.__garbage)
 			{
 				newScript = FlxDestroyUtil.destroy(newScript);

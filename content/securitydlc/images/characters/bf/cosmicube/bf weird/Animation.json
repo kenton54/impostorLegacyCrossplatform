@@ -399,7 +399,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/bf body default",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":1.5,"y":180.2},
@@ -410,7 +410,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/bf body default",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":1.45,"y":180.2},
@@ -421,7 +421,7 @@
 "DU":10,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/bf body default",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":4.5,"y":86.2},
@@ -436,7 +436,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":-16,"y":38.15},
@@ -447,7 +447,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":-16,"y":39.15},
@@ -458,7 +458,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":-12,"y":35.15},
@@ -469,7 +469,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":2,"y":23.15},
@@ -480,7 +480,7 @@
 "DU":6,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":-90,"y":22.15},
@@ -571,7 +571,7 @@
 "MX":[0.948,-0.314,0.314,0.948,343.75,16.6]
 }},
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/bf body default",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":520.05,"y":193.65},
@@ -598,7 +598,7 @@
 "MX":[0.98,-0.195,0.195,0.98,348.55,7.8]
 }},
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/bf body default",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":520.05,"y":193.65},
@@ -633,7 +633,7 @@
 "MX":[0.98,-0.195,0.195,0.98,348.55,7.8]
 }},
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/bf body default",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":520.05,"y":193.65},
@@ -705,7 +705,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/bf body default",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":512.05,"y":177.65},
@@ -724,7 +724,7 @@
 "DU":60,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/bf body default",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":512.05,"y":177.65},
@@ -1069,7 +1069,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":518.6,"y":28.6},
@@ -1077,7 +1077,7 @@
 "MX":[0.983,-0.18,0.18,0.983,291.95,-7.6]
 }},
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/bf body default",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":509.05,"y":86.65},
@@ -1088,7 +1088,7 @@
 "DU":24,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":518.6,"y":28.6},
@@ -1096,7 +1096,7 @@
 "MX":[0.992,-0.123,0.123,0.992,294.35,-20.6]
 }},
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/bf body default",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":509.05,"y":86.65},
@@ -1380,7 +1380,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":-16,"y":38.15},
@@ -1391,7 +1391,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":-16,"y":39.15},
@@ -1402,7 +1402,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":-12,"y":35.15},
@@ -1413,7 +1413,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":2,"y":23.15},
@@ -1424,7 +1424,7 @@
 "DU":6,
 "E":[
 {"SI":{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":-90,"y":22.15},
@@ -1984,7 +1984,7 @@
 }}]}
 ]}
 ]}},{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/bf body default",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/bf body default",
 "TL":{
 "L":[
 {
@@ -2000,7 +2000,7 @@
 }}]}
 ]}
 ]}},{
-"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/BF defalt arm",
 "TL":{
 "L":[
 {
@@ -2190,8 +2190,7 @@
 "SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/purp right mzz",
 "ST":"MC",
 "TRP":{"x":199.5,"y":198.05},
-"MX":[1,0,0,1,0,0],
-"B":2
+"MX":[1,0,0,1,0,0]
 }}]}
 ]},{
 "LN":"Layer_1",
@@ -2240,8 +2239,7 @@
 "SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/purple lef miz",
 "ST":"MC",
 "TRP":{"x":184.6,"y":199.15},
-"MX":[1,0,0,1,0,0],
-"B":2
+"MX":[1,0,0,1,0,0]
 }}]}
 ]},{
 "LN":"Layer_1",
@@ -2290,8 +2288,7 @@
 "SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/purp up mizz",
 "ST":"MC",
 "TRP":{"x":177.55,"y":212.45},
-"MX":[1,0,0,1,0,0],
-"B":2
+"MX":[1,0,0,1,0,0]
 }}]}
 ]},{
 "LN":"Layer_1",
@@ -2349,8 +2346,7 @@
 "SN":"Misc/EXPORT THESE SEPERATELY/BF NORMAL/purp note down mizz",
 "ST":"MC",
 "TRP":{"x":188.45,"y":177.5},
-"MX":[1,0,0,1,0,0],
-"B":2
+"MX":[1,0,0,1,0,0]
 }}]}
 ]},{
 "LN":"Layer_1",
@@ -2482,6 +2478,38 @@
 }}]}
 ]}
 ]}},{
+"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/bf body default",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1.025,0,0,0.988,-0.25,0],
+"N":"49"
+}}]}
+]}
+]}},{
+"SN":"Misc/EXPORT THESE SEPERATELY copy/BF NORMAL/BF defalt arm",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"50"
+}}]}
+]}
+]}},{
 "SN":"aaaa/Symbol 1",
 "TL":{
 "L":[
@@ -2518,14 +2546,14 @@
 }},
 {"ASI":{
 "MX":[1,0,0,1,157.8,136.25],
-"N":"49"
+"N":"51"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.25,-0.35],
-"N":"50"
+"N":"52"
 }}]}
 ]}
 ]}},{
@@ -2541,7 +2569,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"51"
+"N":"53"
 }}]}
 ]}
 ]}},{
@@ -2557,7 +2585,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"52"
+"N":"54"
 }}]}
 ]}
 ]}},{
@@ -2573,7 +2601,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"53"
+"N":"55"
 }}]}
 ]}
 ]}},{
@@ -2589,7 +2617,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"54"
+"N":"56"
 }}]}
 ]}
 ]}},{
@@ -2605,7 +2633,7 @@
 "E":[
 {"ASI":{
 "MX":[0.989,0,0,1,0,0],
-"N":"55"
+"N":"57"
 }}]}
 ]}
 ]}},{
@@ -2621,7 +2649,7 @@
 "E":[
 {"ASI":{
 "MX":[0.989,0,0,1,0,0],
-"N":"56"
+"N":"58"
 }}]}
 ]}
 ]}},{
@@ -2637,7 +2665,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.989,0,0],
-"N":"57"
+"N":"59"
 }}]}
 ]}
 ]}},{
@@ -2653,7 +2681,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.989,0,0],
-"N":"58"
+"N":"60"
 }}]}
 ]}
 ]}},{
@@ -2669,7 +2697,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,37.75,0],
-"N":"59"
+"N":"61"
 }}]}
 ]}
 ]}},{
@@ -2685,7 +2713,7 @@
 "E":[
 {"ASI":{
 "MX":[0.852,0,0,0.981,0,0],
-"N":"60"
+"N":"62"
 }}]}
 ]}
 ]}}

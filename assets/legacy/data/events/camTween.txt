@@ -1,0 +1,7 @@
+Functionality: global
+tween the camera in funny new ways
+leave blank to reset camera
+- value1: x,y,zoom
+- value2: duration,tween
+for a list of tweens, check out this vvv
+https://haxeflixel.com/demos/FlxTween/

@@ -12,6 +12,17 @@ function onCreatePost()
 	
 	if (!PlayState.isStoryMode && picoSkin != null) changeCharacter(picoSkin, 0);
 	if (!PlayState.isStoryMode && neneSkin != null) changeCharacter(neneSkin, 2);
+
+	if (!PlayState.isStoryMode && picoSkin == null)
+	{
+		switch (ClientPrefs.bfSkin)
+		{
+			case 'detectiveplayer', 'bobby', 'LIMEGREENPlayable':
+				changeCharacter(ClientPrefs.bfSkin, 0);
+			
+			default:
+		}
+	}
 }
 
 function onStepHit()

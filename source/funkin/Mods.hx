@@ -329,14 +329,14 @@ class Mods
 		
 		inline function resetIcon()
 		{
-			final path = Paths.getPath('images/branding/icon/icon64.png', null, true);
+			final path = Paths.getPath('images/branding/icon/icon64.png', NORMAL);
 			
 			if (FunkinAssets.exists(path)) FlxG.stage.window.setIcon(Image.fromBytes(FunkinAssets.getBytes(path)));
 		}
 		
 		if (pack.iconFile != null)
 		{
-			final path = Paths.getPath('images/${pack.iconFile}.png', null, true);
+			final path = Paths.getPath('images/${pack.iconFile}.png', NORMAL);
 			
 			if (FunkinAssets.exists(path)) FlxG.stage.window.setIcon(Image.fromBytes(FunkinAssets.getBytes(path)));
 			else

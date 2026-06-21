@@ -8,6 +8,10 @@
 	"girlfriend": [1000, 100],
 	"opponent": [0, 530],
 	"secondopp": [-60, 210],
-	"pet": [1700, 1350]
+	"pet": [1700, 1350],
+	
+	"flags": {
+		"defeat": true
+	}
 }
 

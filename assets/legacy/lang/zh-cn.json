@@ -6,10 +6,12 @@
         "liberbold.ttf": "NotoSansSC-ExtraBold.ttf",
         "AmaticSC-Bold.ttf": "zh_zqbbt.ttf",
         "AmaticSC-Regular.ttf": "zh_zqbbt.ttf",
-        "ariblk.ttf": "NotoSansSC-ExtraBold.ttf"
+
+        "ariblk.ttf": "NotoSansSC-ExtraBold.ttf", // Top 10 score text
+        "apple_kid.ttf": "apple_kid.ttf" // Sussus Nuzzus score text  ps: waiting for adjustment flag!
     },
     "flags": {
-    	"dialogueLeading": -10
+        "dialogueLeading": -10
     },
 
     "translation_credits": "DramaCa, Yoruseri",
@@ -146,7 +148,7 @@
         "bf-stick_hint": "找到秘密传送器！",
         "bf-stick_desc": "你可掉了点秤...",
         "bfsusreal_name": "Sus BF",
-        "bfsusreal_hint": "通过在 Tomongus Tuesday 中赢得 A 以上评级解锁。。",
+        "bfsusreal_hint": "通过在 Tomongus Tuesday 中赢得 A 以上评级解锁",
         "bfsusreal_desc": "他有把刀！还有把枪！但只在上键动作有！",
         "crab_name": "压床蟹",
         "crab_hint": "随时小心。",
@@ -279,7 +281,7 @@
         "identity4": "其剩不多",
         "charles0": "噢，Henry！\nOh, Henry!",
         "charles1": "我有个完美的计划。\nI've got the perfect plan.",
-        "rhm": "再会了，Henry。\nI'll see you, Henry.",
+        "rhm": "我瞅着你了，Henry。\nI see you, Henry.",
         "attack0": "所有人，闭嘴！\nEveryone, shut up!",
         "attack1": "额...额头。\nUh, forehead.",
         "torture0": "谁--谁--谁？\nWh--wh--who?",
@@ -341,14 +343,14 @@
 		"cutscene_turbulence3": "*嗒哒！*\n*TA-DA!*",
 		
 		"cutscene_henry0": "与此同时",
-		"cutscene_henry1": "距此很远，很远之外的",
+		"cutscene_henry1": "距离此地\n很远 很远之外的",
 		"cutscene_henry2": "一处丛林基地内",
 		"cutscene_henryfail0": "无束缚条件！",
-		"cutscene_henryfail1": "嗯……今天天气如何？",
+		"cutscene_henryfail1": "呃......今天...天气如何？",
 		"cutscene_henryending0": "任务完成",
 		"cutscene_henryending1": "火柴人转化器\n将你转化为你梦寐已久的那副身体！\n\"与火柴一样的生活必备品！\" -Gadget Gabe",
 		
-		"cutscene_boilingpoint0": "我不好说大伙，我感觉这像是个精心设计的陷害。\nI don't know guys, this feels like an elaborate setup.",
+		"cutscene_boilingpoint0": "我不好说大伙，我感觉这像是个精心设计的圈套。\nI don't know guys, this feels like an elaborate setup.",
 		"cutscene_boilingpoint1": "我觉得是紫色。\nI think it's Purple.",
 		
 		"cutscene_delusion0": "（现在）",
@@ -357,7 +359,7 @@
 		"cutscene_finale0": "你可是有点毅力，不是吗。",
 		"cutscene_finalegibberish": "&%!$@%$&/@|$!\"&%_-%$-&_&%@!-<o>-!?",
 		"cutscene_finalegibberish2": "!!-_%.?!\"?.-<@>-.!_?$=)(.@_.%&",
-		"cutscene_finale1": "如果他们做不好“阻止你”的大活……",
+		"cutscene_finale1": "如果他们做不好“阻止你”的大活......",
 		"cutscene_finale2": "我只得自己亲手处理妥当",
 		"cutscene_finale3": "通过",
 		"cutscene_finale4": "这",
@@ -475,7 +477,7 @@
         "dialogue_gray1": "噢天",
         "dialogue_heartbeat0": "噢 在这温室里呆着真是孤独啊（无视背景里那些人）",
         "dialogue_heartbeat1": "真希望我能有机会交个朋友......",
-        "dialogue_heartbeat2": "难绷ok所以然后我就像",
+        "dialogue_heartbeat2": "难绷ok所以然后我be like",
         "dialogue_heartbeat3": "哦我的天！！！！嗨————！！ 朝你挥手",
         "dialogue_heartbeat4": "这个 他没和你讲话",
         "dialogue_heartbeat5": "等......你是谁 我没见过你",
@@ -562,7 +564,7 @@
         "opt_streamedsongfiles": "流式音频传输",
         "opt_streamedsongfiles_desc": "可游玩歌曲会以流式传输加载而不是一次性加载。\n大幅改善加载速度。该功能*极度实验性*且很可能造成问题。",
         "opt_autopause": "自动暂停游戏",
-        "opt_autopause_desc": "游戏窗口失去焦点时自动暂停游戏，冻结所有声音和画面。如果取消勾选，无论焦点窗口游戏都会持续进行。",
+        "opt_autopause_desc": "游戏窗口失去焦点时自动暂停游戏，冻结所有声音和画面。\n如果取消勾选，无论是否是焦点窗口游戏都会持续进行。",
         "opt_quants": "量化着色音符",
         "opt_quants_desc": "在游戏内基于节拍着色音符。对时机判断有帮助。",
         "opt_notesplashes": "音符溅射动画",
@@ -658,7 +660,7 @@
         "who38": "对！！\nYES!!",
         "who39": "你在说啥啊？？！\nWHAT ARE YOU SAYING??!",
         "who40": "我说了他在医疗室！\nI TOLD you he's in the medical bay!",
-        "who41": "奥……为毛是我？\nUrghhhh... why me?",
+        "who41": "噢......为毛是我？\nUrghhhh... why me?",
         "who42": "不，我是！\nNo! I am!",
         "who43": "你是啥？\nYou're what??",
         "who44": "不！啥，在医疗室里！！\nNO! What, is IN THE MEDICAL BAY!!",

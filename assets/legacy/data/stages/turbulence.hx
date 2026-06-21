@@ -295,15 +295,9 @@ function onUpdatePost(elapsed:Float):Void
 	
 	// props thingy
 	
-	if (endingSong || (!startingSong && !audio.playing))
-	{
-		musicTime += (musicDelta = (elapsed * 1000));
-	}
-	else
-	{
-		musicDelta = (Conductor.songPosition - musicTime);
-		musicTime = Conductor.songPosition;
-	}
+	var time:Float = getSongTime();
+	musicDelta = (time - musicTime);
+	musicTime = time;
 	
 	if (ClientPrefs.flashing)
 	{

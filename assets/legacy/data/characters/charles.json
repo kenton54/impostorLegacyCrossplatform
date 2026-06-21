@@ -141,13 +141,13 @@
 	"no_antialiasing": false,
 	"image": "characters/henry/charles",
 	"position": [
-		-201,
-		-1
+		0,
+		130
 	],
 	"dance_every": 2,
 	"gameover_intial_sound": null,
 	"scalableOffsets": false,
-	"afterimages": false,
+	"afterimages": true,
 	"gameover_confirm_sound": null,
 	"healthicon": "charles",
 	"gameover_character": null,

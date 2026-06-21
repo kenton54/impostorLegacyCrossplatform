@@ -1,4 +1,4 @@
-Catchall event file for mini events
-Small ones include (THESE WON'T WORK OUTSIDE OF THEIR STAGES/SONGS)
-- Red Notice
-- Red
+Functionality: global
+flash bang the screen for literally no reason, this event is really
+weird and i don't know why
+- value1: 0, 1 = white for 0.35s. 2, 3 = white for 0.55s

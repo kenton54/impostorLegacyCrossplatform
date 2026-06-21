@@ -64,10 +64,16 @@ class TitleState extends MusicBeatState
 			return super.create();
 		}
 		
-		if (ClientPrefs.finaleState == COMPLETE && !ProgressionUtil.songIsClear('finale'))
+		if (ClientPrefs.finaleState == COMPLETE)
 		{
-			// failsafe for a realy specific case
-			ClientPrefs.finaleState = ACTIVE;
+			if (!ProgressionUtil.songIsClear('finale'))
+			{
+				ClientPrefs.finaleState = ACTIVE; // failsafe for a realy specific case
+			}
+			else if (!ClientPrefs.doubletrouble)
+			{
+				ClientPrefs.doubletrouble = true;
+			}
 		}
 		
 		init();
@@ -100,6 +106,7 @@ class TitleState extends MusicBeatState
 		}
 		
 		Conductor.bpm = 102;
+		Conductor.bpmChangeMap.resize(0);
 		
 		if (isHardcodedState() && scriptGroup.call('onStartIntro') != ScriptConstants.STOP_FUNC)
 		{

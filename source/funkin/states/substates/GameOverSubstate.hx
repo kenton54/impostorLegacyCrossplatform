@@ -93,7 +93,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			camFollow = new FlxObject(boyfriend.getMidpoint()
 				.x - boyfriend.cameraPosition[0] - 100, boyfriend.getMidpoint().y + boyfriend.cameraPosition[1] - 100);
 				
-			if (deathSoundName != null) FlxG.sound.play(Paths.sound(deathSoundName));
+			if (deathSoundName != null) FlxG.sound.play(Paths.sound(deathSoundName, LOOSE));
 			FlxG.camera.scroll.set();
 			FlxG.camera.target = null;
 			
@@ -151,7 +151,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		PlayState.instance?.scripts.call('onUpdate', [elapsed]);
 		super.update(elapsed);
 		
-		if (controls.ACCEPT && !isEnding)
+		if ((controls.ACCEPT || FlxG.mouse.justPressed) && !isEnding)
 		{
 			if (PlayState.instance?.scripts.call('onGameOverConfirm', []) != ScriptConstants.STOP_FUNC) endBullshit();
 		}
@@ -203,7 +203,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	 */
 	function coolStartDeath(?volume:Float = 1):Void
 	{
-		if (loopSoundName != null) FunkinSound.playMusic(Paths.music(loopSoundName), volume);
+		if (loopSoundName != null) FunkinSound.playMusic(Paths.music(loopSoundName, LOOSE), volume);
 		
 		PlayState.instance?.scripts.call('deathAnimStart', [volume]);
 	}
@@ -216,7 +216,7 @@ class GameOverSubstate extends MusicBeatSubstate
 		isEnding = true;
 		boyfriend.playAnim('deathConfirm', true);
 		FlxG.sound.music.stop();
-		if (endSoundName != null) FlxG.sound.play(Paths.music(endSoundName));
+		if (endSoundName != null) FlxG.sound.play(Paths.music(endSoundName, LOOSE));
 		new FlxTimer().start(0.7, function(tmr:FlxTimer) {
 			FlxG.camera.fade(FlxColor.BLACK, 2, false, function() {
 				FlxG.resetState();

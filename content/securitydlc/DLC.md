@@ -1,12 +1,10 @@
-# INFORMATION
+## INFORMATION
 (formerly called Kim's Legacy DLC)
 The DLC is an example mod made for VS. Impostor Legacy. For a grounded guide to modding, follow this link:
 / https://docs.google.com/document/d/1Q4RhAwkRDHiD6EqlygcZ5ll76XTfUtQdY_kyE-udTGg /
 
-# Created by Kimirittoz
+### Created by Kimirittoz
 
-# VS Impostor: Security DLC 1.1.0 Changelog
--
 # SUPPORTED LANGUAGES
 - English (United States)
 - Arabic
@@ -24,14 +22,52 @@ The DLC is an example mod made for VS. Impostor Legacy. For a grounded guide to 
 - French
 - Norwegian
 - Greek
+- Lithuanian
+- Vietnamese
 
-## Changes
+# CHANGELOG
+Current version: **1.1.1b**
+
+## 1.1.1b (june 21 2026)
+
+### Changes
+- Mini Grey pet has correct requirements.
+- Speaker Black no longer tweaks out in Don't Lied.
+- Speaker Black's position while using Noob49 fixed.
+
+## 1.1.1 (june 21 2026)
+
+### Changes
+- Getting pranked in Don't Lied made more immersive.
+  - Can no longer taunt during a prank.
+- Fixed some bugs with playable Noob49.
+- Added a missing note in Trot Away.
+- Fixed an issue with some skins in Suspect.
+- Fixed some issues with the EVIL BF skin.
+- Low Quality version of the Triple Threat stage fixed.
+- Mini Grey does not bend the rules of pixel stages.
+- Mini Grey also gets his mini car back in Danger.
+- Several language files were updated.
+- Playable JADS skin let into Suspect.
+- Icons for playable Bobby and Detective skins have been updated.
+- Weird Pico and BF's misses have been fixed.
+- You can now pet playable JADSPOSTOR.
+  - You can also pet the Pets when using the playable JADSPOSTOR skin.
+- Crew BF has a Weird variant.
+- Playable Noob49 gets a stabbed variant.
+- Black Speaker given a knife raise animation (similar to Nene).
+- White Speaker given a mocking animation.
+- Don't Lied given reactor beep events.
+
+## 1.1.0 (june 10 2026)
+
+### Changes
 - DLC translated to several languages.
 - Added dialogue for Suspect, along with dialogue sprites for Pico.
 - RGB Pet now works with other shaders such as rimlight.
 - RGB Pet given more colors to work with.
 - Added `"rgbPetColor"` character flag.
-  - Allows for custom characters to set a color for their RGBPet or any other RGB pets.
+  - Allows for custom characters to set a color for their RGB pet or any other RGB pets.
 - Fixed a Geneva Convention violation.
 - Freeplay cards in the DLC week are now fancier.
 - The Story Mode node and dashes for DLC are now also fancier.
@@ -83,9 +119,9 @@ The DLC is an example mod made for VS. Impostor Legacy. For a grounded guide to 
 - Playable Shit reanimated and given a hey sprite.
 - Playable Blake given a hey and miss sprite.
 
-# VS Impostor: Security DLC 1.0.2 Changelog
--
-## Changes
+## 1.0.2 (april 26 2026)
+
+### Changes
 - Removed following skins from being purchased: (they were considered filler skins by me, nothing actually wrong with them)
   - Dead Noob49
   - Ghost Yellow
@@ -96,18 +132,18 @@ The DLC is an example mod made for VS. Impostor Legacy. For a grounded guide to 
 - Weird Pico given a Generic Pico Gameover.
 - Few other skins given RGB Pet support.
 
-# VS Impostor: Security DLC 1.0.1 Changelog
--
-## Changes
+## 1.0.1 (april 25 2026)
+
+### Changes
 - Speaker Mungus sprite mouth fixed.
 - Shit's icon returned.
 - One event in Triple Threat swapped.
 - Dead Noob49 named correctly.
 - DLC dialogue and cosmicube now support translations.
 
-# VS Impostor: Security DLC 1.0.0 Changelog
--
-## DLC Week
+## 1.0.0 (april 25 2026)
+
+### DLC Week
 - 5 new songs are added.
   - 49 (VS. Noob49)
   - Don't Lied (VS. Purple)
@@ -116,7 +152,7 @@ The DLC is an example mod made for VS. Impostor Legacy. For a grounded guide to 
   - Triple Threat (VS. Triple Trouble, Freeplay)
 - 3 cutscenes added.
 
-## Cosmicube Menu
+### Cosmicube Menu
 - New currency: Pentacle
 - New Cosmicube: DLC COSMICUBE
 
@@ -156,7 +192,7 @@ The DLC is an example mod made for VS. Impostor Legacy. For a grounded guide to 
   - Birdpostor
   - Aquarium
 
-## Credits
+### Credits
 - Cosmicube:
   - RGBPet - EthanTheDoodler (Base), emi3, Orbyy, Loggo (Script/Shader)
   - EVIL BF - Remi

@@ -52,7 +52,7 @@ function assignValues(info:Array<String>)
 
 function getInfo(?info = 'info')
 {
-	var txt = Paths.getPath('songs/' + Paths.sanitize(songName) + '/' + info + '.txt', null, true);
+	var txt = Paths.getPath('songs/' + Paths.sanitize(songName) + '/' + info + '.txt', null, PathsTestMode.NORMAL);
 	var taskSong:Array<String> = CoolUtil.coolTextFile(txt);
 	// if (ClientPrefs.inDevMode) trace(taskSong);
 	

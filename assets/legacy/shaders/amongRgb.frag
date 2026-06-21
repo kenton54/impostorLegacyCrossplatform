@@ -25,12 +25,12 @@ void main() {
 	{
 		bool transform = (openfl_HasColorTransform || hasColorTransform);
 		
-		if (transform) texColor.rgb /= texColor.a;
+		texColor.rgb /= texColor.a;
 		
 		vec3 hsv = rgb2hsv(vec3(texColor.r, texColor.g, texColor.b));
 		
 		vec4 rgbColor = vec4((texColor.r * red + texColor.g * green + texColor.b * blue) * hsv.y + (1. - hsv.y) * hsv.z, texColor.a);
-		rgbColor.b += (visor * ((1 - texColor.g) * (1 - texColor.r) * (1 - texColor.b)) * hsv.z);
+		if (texColor.g > 0.) rgbColor.b += (visor * ((1 - texColor.g) * (1 - texColor.r) * (1 - texColor.b)) * hsv.z);
 		rgbColor = clamp(rgbColor, 0., 1.);
 		
 		if (transform) rgbColor = (rgbColor * vec4(openfl_ColorMultiplierv.rgb, 1.) + openfl_ColorOffsetv);

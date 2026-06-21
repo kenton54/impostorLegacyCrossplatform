@@ -99,8 +99,8 @@ function onEvent(eventName, value1, value2)
 					dad.alpha = 1;
 					gf.alpha = 1;
 					// pet.alpha = 1;
-					lightoverlayDK.alpha = 1;
-					mainoverlayDK.alpha = 1;
+					lightoverlayDK.alpha = 0.6;
+					mainoverlayDK.alpha = 0.51;
 				case 'gonnakill':
 					FlxTween.tween(game, {defaultCamZoom: 1}, Conductor.crotchet * .004, {ease: FlxEase.sineInOut});
 					FlxTween.tween(cargoDarkFG, {alpha: 1}, Conductor.crotchet * .004);
@@ -151,28 +151,33 @@ function defeatness():Void
 {
 	if (!ClientPrefs.shaders) return;
 	
+	var defeat:Null<String> = boyfriend.getFlag('variants')?.defeat;
+	if (defeat != null) changeCharacter(defeat, 0);
+	
 	var blackRimlightBase:ExtraDropShadowShader = new funkin.game.shaders.ExtraDropShadowShader();
 	
-	blackRimlightBase.threshold = .1;
+	blackRimlightBase.threshold = .05;
 	blackRimlightBase.strength = .85;
 	blackRimlightBase.setColorMatrix([
-		  .3,  .5, -.2, 0, -50,
-		-.25,  .1, .05, 0,  10,
-		  .4, .25,  .6, 0, -92,
-		   0,   0,   0, 1,   0
+		.4, .5, -.2, 0, -50,
+		-.25, .7, -.15, 0, -20,
+		.42, -.35, .85, 0, -72,
+		0, 0, 0, 1, 0
 	]);
 	blackRimlightBase.addLayer([
-		.5, 0,   1, 0, 192,
-		.1, 1, -.5, 0,  64,
-		 0, 0, .35, 0,  64,
-		 0, 0,   0, 1,   0
+		.7, .5, 1, 0, 192,
+		.3, .4, -.5, 0, 64,
+		-.1, .2, .35, 0, 74,
+		0, 0, 0, 1, 0
 	], 10, 14, .01);
-	blackRimlightBase.addLayer(blackRimlightBase.addLayer([
-		 .9, .7, .4, 0,   4,
-		-.2, .3, .1, 0, -18,
-		 .2, .2, .4, 0, -28,
-		  0,  0,  0, 1,   0
-	], 12, 40, .01, .4).colorMatrix, 96, 24, .01, .4);
+	blackRimlightBase.addLayer(
+		blackRimlightBase.addLayer([
+			.9, .6, .4, 0, 4,
+			-.2, .5, .1, 0, -18,
+			-.2, .2, .4, 0, -28,
+			0, 0, 0, 1, 0
+		], 12, 40, .01, .4)
+	.colorMatrix, 96, 24, .01, .4);
 	
 	if (hasBfSkin && boyfriend.getFlag('backlit') != true)
 	{

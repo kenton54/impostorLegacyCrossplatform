@@ -1,9 +1,13 @@
+var ext:String = 'stages/freeplay/roomcode/';
+var fakenenebox:FlxSprite;
+public var fakenenebox:FlxSprite;
+
 function onLoad()
 {
-	var bg:FlxSprite = new FlxSprite(-1119.5, -649).loadGraphic(Paths.image("stages/freeplay/roomcode/roomcodebg"));
+	var bg:FlxSprite = new FlxSprite(-1119.5, -649).loadGraphic(Paths.image(ext + "roomcodebg"));
 	add(bg);
 	
-	var bg2:FlxSprite = new FlxSprite(-74.65, 530.85).loadGraphic(Paths.image("stages/freeplay/roomcode/box"));
+	var bg2:FlxSprite = new FlxSprite(-74.65, 530.85).loadGraphic(Paths.image(ext + "box"));
 	add(bg2);
 }
 

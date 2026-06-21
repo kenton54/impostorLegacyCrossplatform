@@ -1,0 +1,5 @@
+Functionality: stage/song
+camera movements for stages/voting.hx
+- value 1: "in"/"close", if value is anything else, set camera to middle
+- value 2: if value is "dad", focus on warchief/jelqer respectively
+- value 2: otherwise, focus on bf/redmungus

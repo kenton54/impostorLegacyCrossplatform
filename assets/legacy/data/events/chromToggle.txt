@@ -1,0 +1,3 @@
+Functionality: stage/song
+- value 1: how much chromatic abberation happens
+- value 2: beat interval

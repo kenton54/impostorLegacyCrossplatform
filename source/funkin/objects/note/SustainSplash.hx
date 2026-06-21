@@ -25,7 +25,7 @@ class SustainSplash extends RGBSprite implements funkin.game.modchart.IModNote
 	{
 		super(x, y);
 		
-		addAnims(NoteUtil.getSkinFromID(player));
+		addAnims(skin = NoteUtil.getSkinFromID(player));
 	}
 	
 	function addAnims(_skin:NoteSkin)
@@ -51,6 +51,8 @@ class SustainSplash extends RGBSprite implements funkin.game.modchart.IModNote
 			if (anim.contains('start')) playAnim('loop$data', false);
 			if (anim.contains('end')) kill();
 		});
+		
+		_textureLoaded = _skin.sustainSplashTexture;
 	}
 	
 	public override function playAnim(anim:String, force:Bool = false, isReversed:Bool = false, frame:Int = 0)
@@ -89,6 +91,8 @@ class SustainSplash extends RGBSprite implements funkin.game.modchart.IModNote
 		skin = NoteUtil.getSkinFromID(player);
 		
 		antialiasing = skin?.antialiasing ?? true;
+		
+		if (_textureLoaded != skin.sustainSplashTexture) addAnims(skin);
 		
 		if (skin?.susSplashScale != null) scale.set(skin.susSplashScale, skin.susSplashScale);
 		

@@ -270,9 +270,9 @@ class WeekData
 		final ok:String = Mods.currentModDirectory;
 		Mods.currentModDirectory = weekFile.folder;
 		
-		var path:String = Paths.getPath('weeks/freeplay/$sec.json', true), section:FreeplaySectionFile = null;
+		var path:String = Paths.getPath('weeks/freeplay/$sec.json', NORMAL), section:FreeplaySectionFile = null;
 		
-		if (!FunkinAssets.exists(path)) path = Paths.getPath('data/weeks/freeplay/$sec.json', true);
+		if (!FunkinAssets.exists(path)) path = Paths.getPath('data/weeks/freeplay/$sec.json', NORMAL);
 		if (FunkinAssets.exists(path)) section = FreeplaySectionData.getFreeplaySectionFile(path);
 		
 		var section:FreeplaySectionData = new FreeplaySectionData(section ?? {title: '???', index: 2147483647}, sec);

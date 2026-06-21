@@ -1,4 +1,6 @@
-Catchall event file for mini events
-Small ones include (THESE WON'T WORK OUTSIDE OF THEIR STAGES/SONGS)
-- Red Notice
-- Red
+Functionality: stage/song
+this event is only called by stages and/or songs and is never
+used by a global function so it's the dummy event we use
+for most songs/stages to keep the events tab nice and tidy
+- value1: whatever
+- value2: whatever

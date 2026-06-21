@@ -247,27 +247,20 @@ class PsychHUD extends BaseHUD
 	
 	override function update(elapsed:Float)
 	{
-		super.update(elapsed);
+		healthLerp = FlxMath.lerp(healthLerp, parent.health, 0.15);
 		
 		updateIconsPosition();
 		updateIconsScale(elapsed);
 		updateIconsAnimation();
 		
-		if (!parent.startingSong && !parent.paused && parent.updateTime && !parent.endingSong)
-		{
-			var curTime:Float = Math.max(0, Conductor.songPosition - ClientPrefs.noteOffset);
-			parent.songPercent = (curTime / parent.songLength);
-			
-			var songCalc:Float = (parent.songLength - curTime);
-			if (ClientPrefs.timeBarType == 'Time Elapsed') songCalc = curTime;
-			
-			var secondsTotal:Int = Math.floor(songCalc / 1000);
-			if (secondsTotal < 0) secondsTotal = 0;
-			
-			if (ClientPrefs.timeBarType != 'Song Name') timeTxt.text = flixel.util.FlxStringUtil.formatTime(secondsTotal, false);
-		}
+		final curTime:Float = FlxMath.bound(parent.getSongTime() - ClientPrefs.noteOffset, 0, parent.songLength);
+		parent.songPercent = (curTime / parent.songLength);
 		
-		healthLerp = FlxMath.lerp(healthLerp, parent.health, 0.15);
+		var songCalc:Float = (ClientPrefs.timeBarType == 'Time Left' ? (parent.songLength - curTime) : curTime);
+		
+		if (ClientPrefs.timeBarType != 'Song Name') timeTxt.text = FlxStringUtil.formatTime(Math.floor(songCalc / 1000), false);
+		
+		super.update(elapsed);
 	}
 	
 	override function beatHit()

@@ -1,2 +1,8 @@
-call light out
-if value1 is 1 then dont work if flashingLights is off
+Functionality: global
+reactor beep
+
+fun vs impostor fact: the people who fix the reactors all the time
+in all the songs names are Gabble and Gobble, the reason they
+didn't fix reactor in Reactor is because it'd require them
+to be on-screen, so they didn't show up and thus you ended
+up dying. fuck you Gabble and Gobble. I hate you two so much.

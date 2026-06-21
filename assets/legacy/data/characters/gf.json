@@ -37,6 +37,26 @@
 			"name": "gf sad"
 		},
 		{
+			"loop": true,
+			"offsets": [
+				-2,
+				-21
+			],
+			"fps": 24,
+			"anim": "sad-loop",
+			"indices": [
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			],
+			"name": "gf sad"
+		},
+		{
 			"loop": false,
 			"offsets": [
 				0,
@@ -112,7 +132,7 @@
 		0
 	],
 	"gameover_loop_sound": null,
-	"sing_duration": 4,
+	"sing_duration": 6,
 	"scale": 1,
 	"_editor_isPlayer": false,
 	"flags": {

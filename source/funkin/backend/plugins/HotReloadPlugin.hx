@@ -52,17 +52,13 @@ class HotReloadPlugin extends FlxBasic
 			FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
 			FlxG.resetState();
 			
-			funkin.Mods.loadTopMod();
+			funkin.Mods.currentModConfig = funkin.Mods.loadTopModConfig();
 		}
 		if (FlxG.keys.justPressed.F7)
 		{
 			funkin.data.Lang.reloadLangFile();
 			FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
 			FlxG.resetState();
-		}
-		if (FlxG.keys.justPressed.F9 && ClientPrefs.inDevMode)
-		{
-			throw 'Triggered a manual crash';
 		}
 	}
 }

@@ -45,6 +45,8 @@ class NoteSplash extends RGBSprite implements funkin.game.modchart.IModNote
 			scale.set(skin.splashScale, skin.splashScale);
 			baseScale.copyFrom(scale);
 		}
+		
+		animation.onFinish.add((anim) -> if (anim.contains('splash')) kill());
 	}
 	
 	public function setupNoteSplash(strum:StrumNote, ?note:Note, ?texture:String, ?graphicsInput:RGBGraphics, ?field:PlayField)
@@ -129,13 +131,6 @@ class NoteSplash extends RGBSprite implements funkin.game.modchart.IModNote
 		}
 		
 		_textureLoaded = skin;
-	}
-	
-	override function update(elapsed:Float)
-	{
-		if (animation.curAnim != null) if (animation.curAnim.finished) kill();
-		
-		super.update(elapsed);
 	}
 	
 	// doing this so the splash tracks the location of the strumnote if ur moving the notes actively with modmanager

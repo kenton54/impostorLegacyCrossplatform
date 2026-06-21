@@ -1,4 +1,4 @@
-# VS IMPOSTOR LEGACY 1.0.1
+# VS IMPOSTOR LEGACY 1.1.1
 
 ![](assets/legacy/images/branding/UpdogBlack.png)
 

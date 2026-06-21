@@ -1,4 +1,3 @@
-vs impostor subbed
-these only function if your language isnt english
-reads a line from the lang file
-leave value1 blank to hide text
+Functionality: global
+subtitles
+- value1: the line from your lang file, leave empty to hide caption

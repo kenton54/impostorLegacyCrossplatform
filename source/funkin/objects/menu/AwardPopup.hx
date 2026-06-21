@@ -40,9 +40,9 @@ class AwardPopup extends FlxSpriteGroup
 		add(bg);
 		
 		var iconName:String = GameFlags.getAchievementIcon(id);
-		if (!Paths.fileExists('images/awards/$iconName.png')) iconName = 'blank';
+		if (!Paths.fileExists('images/awards/$iconName.png', LOOSE)) iconName = 'blank';
 		icon = new FlxSprite(0, 0);
-		icon.loadGraphic(Paths.image('awards/$iconName'));
+		icon.loadGraphic(Paths.image('awards/$iconName', LOOSE));
 		icon.antialiasing = ClientPrefs.globalAntialiasing;
 		icon.scrollFactor.set();
 		icon.setGraphicSize(75, 75);

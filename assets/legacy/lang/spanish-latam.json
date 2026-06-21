@@ -561,7 +561,7 @@
         "opt_subtitles": "Subtítulos",
         "opt_subtitles_desc": "Se mostrarán subtítulos durante cinemáticas y animaciones durante canciones.",
         "opt_unlockedFramerate": "Fotogramas desbloqueados",
-        "opt_unlockedFramerate_desc": "Desbloquea los fotogramas por segundo del jego. Usa más CPU pero puede ayudar con la latencia de entrada.",
+        "opt_unlockedFramerate_desc": "Desbloquea los fotogramas por segundo del juego. Usa más CPU pero puede ayudar con la latencia de entrada.",
 
         "opt_vsyncMode": "VSync",
         "opt_vsyncMode_desc": "Sincroniza los FPS del juego con la frecuencia de tu monitor para evitar el desgarro de tu pantalla.",

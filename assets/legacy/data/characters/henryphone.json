@@ -1,114 +1,130 @@
 {
+	"pausePortrait": "",
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				172,
 				-58
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Henry Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				154,
 				-48
 			],
-			"anim": "singDOWNmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Miss Down",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "Henry Miss Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				54,
 				87
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Henry Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				179,
 				62
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Henry Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				83,
 				20
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "Henry Right",
-			"indices": []
+			"indices": [],
+			"name": "Henry Right"
 		},
 		{
-			"loop": false,
-			"offsets": [
-				10,
-				90
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "Henry Idle",
-			"indices": []
-		},
-		{
-			"loop": false,
 			"offsets": [
 				192,
 				0
 			],
-			"anim": "singLEFTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Miss Left",
-			"indices": []
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Henry Miss Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				68,
 				-32
 			],
-			"anim": "singRIGHTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Miss Right",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "Henry Miss Right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				55,
 				83
 			],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Miss Up",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "Henry Miss Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				4,
 				313
 			],
-			"anim": "intro",
+			"loop": false,
 			"fps": 24,
-			"name": "Henry Greatest Plan Intro",
-			"indices": []
+			"anim": "intro",
+			"indices": [],
+			"name": "Henry Greatest Plan Intro"
+		},
+		{
+			"offsets": [
+				10,
+				90
+			],
+			"indices": [],
+			"fps": 24,
+			"flipX": false,
+			"flipY": false,
+			"anim": "danceLeft",
+			"loop": false,
+			"name": "Henry Idle Charles"
+		},
+		{
+			"offsets": [
+				10,
+				90
+			],
+			"indices": [],
+			"fps": 24,
+			"flipX": false,
+			"flipY": false,
+			"anim": "danceRight",
+			"loop": false,
+			"name": "Henry Idle No charles"
 		}
 	],
 	"no_antialiasing": false,
@@ -119,9 +135,11 @@
 	],
 	"dance_every": 2,
 	"gameover_intial_sound": "stage/stickbf_Death",
+	"flags": {},
 	"scalableOffsets": false,
 	"gameover_confirm_sound": "stickbf_death_end",
 	"healthicon": "henry",
+	"afterimages": true,
 	"gameover_character": "henryphone-dead",
 	"vslice_sustains": false,
 	"flip_x": true,
@@ -131,7 +149,7 @@
 		0
 	],
 	"gameover_loop_sound": "stickbf_death_loop",
-	"sing_duration": 4,
+	"sing_duration": 6,
 	"scale": 1,
 	"_editor_isPlayer": true
 }

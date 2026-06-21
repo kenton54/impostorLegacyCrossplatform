@@ -8,5 +8,8 @@
 	"girlfriend": [400, 100],
 	"opponent": [0, 100],
 	"secondopp": [-60, 210],
-	"pet": [1520,895]
+	"pet": [1520,895],
+	"flags":{
+		"weird": true
+	}
 }

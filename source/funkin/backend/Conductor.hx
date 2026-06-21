@@ -176,7 +176,7 @@ class Conductor
 		return Math.floor(getSection(time));
 	}
 	
-	public static function mapBPMChanges(song:Song)
+	public static function mapBPMChanges(?song:Song)
 	{
 		if (song == null) {
 			bpmChangeMap = defaultBPMChangeMap(Conductor.bpm);

@@ -5,9 +5,13 @@ public var dimShader = (ClientPrefs.shaders ? new funkin.game.shaders.ColorMatri
 public var hudDarkShader:ExtraDropShadowShader;
 public var darkShader:ExtraDropShadowShader;
 public var vignette:Bool = false;
+var ouch:Bool = false;
+var hesDying:Bool = false;
+var dieMiss:Bool = false;
 var isDark:Bool = false;
 var fakeIcon:FlxSprite;
-
+var variant = boyfriend.getFlag('variants')?.stabbed;
+var noshader:Bool = false;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 
@@ -47,19 +51,19 @@ function onLoad()
 		0, 0, 0, 0, 0,
 		0, 0, 0, 0, 0,
 		0, 0, 0, 1, 0
-	], -32, 15, 0);
-	darkShader.addLayer([
-		0, 0, 0, 0, 255,
-		0, 0, 0, 0, 255,
-		0, 0, 0, 0, 255,
-		0, 0, 0, 1, 0
-	], 140, 15, 0);
-	darkShader.addLayer([
-		0, 0, 0, 0, 0,
-		0, 0, 0, 0, 0,
-		0, 0, 0, 0, 0,
-		0, 0, 0, 1, 0
 	], -70, 22, 0);
+	darkShader.addLayer([
+		0, 0, 0, 0, 255,
+		0, 0, 0, 0, 255,
+		0, 0, 0, 0, 255,
+		0, 0, 0, 1, 0
+	], 140, 10, 0);
+	darkShader.addLayer([
+		0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0,
+		0, 0, 0, 0, 0,
+		0, 0, 0, 1, 0
+	], -32, 12, 0);
 	
 	darkShader.attachedSprite = boyfriend;
 	boyfriend.useRenderTexture = true;
@@ -71,11 +75,8 @@ function onCreatePost()
 	fakeIcon = new HealthIcon('purple', false);
 	fakeIcon.cameras = [camHUD];
 	fakeIcon.setPosition(playHUD.iconP2.x, playHUD.iconP2.y);
-	fakeIcon.visible = true;
 	playHUD.iconP2.visible = false;
-	add(fakeIcon);
-	playHUD.remove(fakeIcon);
-	playHUD.insert(playHUD.members.indexOf(playHUD.iconP2), fakeIcon);
+	if (!ClientPrefs.hideHud) playHUD.insert(playHUD.members.indexOf(playHUD.iconP2), fakeIcon);
 }
 function onUpdate(elapsed)
 {
@@ -128,34 +129,58 @@ function onStepHit() //a way to do events in the song script instead of events.j
 	    	FlxTween.tween(camGame, {zoom: 0.73}, 0.5, {ease: FlxEase.quadOut});
         case 1180:
 	    	FlxTween.tween(camGame, {zoom: 0.70}, 0.5, {ease: FlxEase.quadOut});
+	    	
 		case 1184:
 	    	triggerEventNote('Lights out', '', '');
 	    	camSpecialThing([640, 450], [980, 480]);
             FlxTween.tween(camGame, {zoom: 0.9}, 20, {ease: FlxEase.quadInOut});
 			PlayState.instance.triggerEventNote("Alt Idle Animation", "Dad", "-alt");
 			fakeIcon.changeIcon('purple', false);
+			
 		case 1232:
 	    	dad.x = 690;
+	    	
 		case 1376:
 	    	triggerEventNote('Lights on', '', '');
 			camSpecialThing([640, 450], [810, 450]);
+			
         case 1394:
+			hesDying = true;
             FlxTween.tween(camGame, {zoom: 0.85}, 1, {ease: FlxEase.quadInOut});
 			dad.animation.play(boyfriend.getFlag('seeThrough') ? 'ghoststab' : 'stab', true);
 			dad.specialAnim = true;
 		case 1396:
+			boyfriend.canTaunt = false;
 	    	blooodfuckkk.alpha = 0.8;
             camSpecialThing([640, 450], [810, 470]);
 	    	FlxTween.tween(blooodfuckkk, {alpha: 0.2}, 2, {ease: FlxEase.quadInOut});
-	    	if (boyfriend.curCharacter == 'bfweird')
-	    	PlayState.instance.triggerEventNote("Change Character", "bf", "bfweird-stabbed");
 			gf.animation.play('sad', true);
 			gf.specialAnim = true;
 	    	FlxTween.tween(dad, {x: dad.x - 75}, 6, {ease: FlxEase.quadInOut});
+	    	
+			if (variant != null)
+			{
+				changeCharacter(variant, 0);
+			}
+	    	else
+	    	{
+	    		// this is gona look really funny on jads
+	    		dieMiss = boyfriend.skipDance = true;
+	    	}
+        	ouch = true;
+			if (boyfriend.curCharacter == 'yellowplayablestabbed')
+			{
+				boyfriend.animation.play('stabbed', true);
+				boyfriend.specialAnim = true;
+			}
 		case 1408:
+			ouch = false; //well that was short
+			for (anim in boyfriend.animation.getAnimationList()) anim.frameRate = Std.int(anim.frameRate * .75);
+			
             FlxTween.tween(camGame, {zoom: 0.9}, 20);
 		    FlxTween.tween(loBlack2, {alpha: 1}, 20);
-			PlayState.instance.triggerEventNote("Alt Idle Animation", "Dad", boyfriend.getFlag('seeThrough') ? '-bruh' : '-fart'); 
+		    
+			triggerEventNote("Alt Idle Animation", "Dad", boyfriend.getFlag('seeThrough') ? '-bruh' : '-fart'); 
 	}
 	if (curBeat >= 1184) light.animation.play('lightsoff', true);
 }
@@ -169,8 +194,18 @@ function onEvent(name, v1, v2)
 			gf.alpha = 0.001;
 			pet.kill();
 			playHUD.iconP1.shader = hudDarkShader;
-			if (boyfriend.curCharacter == 'bfweird') triggerEventNote('Change Character', '0', 'bf-dark');
-			else boyfriend.shader = darkShader;
+			
+			var dark:Null<String> = boyfriend.getFlag('variants')?.dark;
+			if (dark != null)
+			{
+				changeCharacter(dark, 0);
+				boyfriend.shader = null;
+				noshader = true;
+			}
+			else if (boyfriend.getFlag('dark') != true)
+			{
+				boyfriend.shader = darkShader;
+			}
             dad.shader = null;
 			dad.alpha = 0.001;
             loBlack.alpha = 1;
@@ -179,11 +214,13 @@ function onEvent(name, v1, v2)
 			fakeIcon.kill();
 			playHUD.healthBar.bg.setColorTransform(0, 0, 0, 1, 224, 224, 224);
 			light.alpha = 0.001;
+			
 		case 'Lights on':
 			isDark = false;
             loBlack.alpha = 0.001;
-			if (boyfriend.curCharacter == 'bf-dark') triggerEventNote('Change Character', '0', 'bfweird');
-			else boyfriend.shader = null;
+			
+			if (noshader) changeCharacter(hasBfSkin ? ClientPrefs.bfSkin : PlayState.SONG.player1, 0);
+			boyfriend.shader = null;
 			dad.alpha = 1;
 			gf.alpha = 1;
 			playHUD.iconP1.shader = null;
@@ -191,16 +228,16 @@ function onEvent(name, v1, v2)
             guy2.alpha = 1;
             guy3.alpha = 1;
 			playHUD.healthBar.bg.setColorTransform();
-			fakeIcon = new HealthIcon('purplehi', false);
-			fakeIcon.cameras = [camHUD];
-			fakeIcon.setPosition(playHUD.iconP2.x, playHUD.iconP2.y);
-			add(fakeIcon);
-			playHUD.remove(fakeIcon);
-			playHUD.insert(playHUD.members.indexOf(playHUD.iconP2), fakeIcon);
+			
+			if (!ClientPrefs.hideHud)
+			{
+				fakeIcon.revive();
+				fakeIcon.changeIcon('purplehi');
+			}
+			
 			light.alpha = 1;
 	}
 }
-
 
 function opponentNoteHit(note)
 {	
@@ -211,10 +248,22 @@ function onGhostAnim(anim, note)
 {
 	if (isDark) return Function_Stop;
 }
+function goodNoteHitPre(note)
+{
+	if (ouch)
+	{
+		if (dieMiss && boyfriend.hasAnim('singLEFTmiss'))
+			note.animSuffix = 'miss';
+		if (boyfriend.curCharacter == 'yellowplayablestabbed')
+			note.noAnimation = true;
+	}
+}
 function goodNoteHit(note)
 {
-	if (curStep >= 1394)
-	{
+	if (hesDying) {
+		if (FlxG.random.bool(30)) FlxTween.shake(boyfriend, .005, .05, FlxAxes.X);
+		if (FlxG.random.bool(30)) FlxTween.shake(boyfriend, .003, .05, FlxAxes.Y);
+		
 		if (health > 0.2)
 			health -= 0.035;
 	}

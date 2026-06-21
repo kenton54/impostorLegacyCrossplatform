@@ -3,7 +3,7 @@ import flixel.addons.display.FlxRuntimeShader;
 import String;
 
 // hi this is kim, this script was made by ASHLEY and edited by LOGGO and ORBYY, thank you!
-var petRGB:FlxRuntimeShader = null;
+public var petRGB:FlxRuntimeShader = null;
 
 /**
 	* Since the RGB pets default to Boyfriend's health icon color, some colors (like yellowplayable and amongbf) would be ugly/inaccurate to how they are in Among Us. 
@@ -39,7 +39,8 @@ public var overwriteColors:Map<String, Array<FlxColor>> = [
 	'blake' => [0xFF342F43, 0xFF15141A],
 	'bobby' => [0xFF1F0F89, 0xFF19123E],
 	'bfblack' => [0xFF2B2C3C, 0xFF1A182E],
-	'shit' => [0xFF7D4831, 0xFF5F1B37]
+	'shit' => [0xFF7D4831, 0xFF5F1B37],
+	'amongbfweird' => [0xFFC93E3E, 0xFF80254D]
 ];
 
 /**
@@ -47,7 +48,7 @@ public var overwriteColors:Map<String, Array<FlxColor>> = [
 **/
 var hasRGBpet:Bool = false;
 
-function onCreatePost()
+function applyPetRGB(pet:Pet)
 {
 	if (!pet.getFlag('rgb')) return; // WHAT DO YOU MEAN WE DONT EVEN HAVE AN RGB PET ON
 	if (!pet.isAnimate)
@@ -56,10 +57,13 @@ function onCreatePost()
 		return;
 	}
 	
-	var frag:String = Paths.getTextFromFile('shaders/amongRgb.frag');
-	petRGB = new FlxRuntimeShader(frag);
-	petRGB.setFloatArray('green', [96 / 255, 208 / 255, 1]);
-	petRGB.setFloat('visor', 1);
+	if (petRGB == null)
+	{
+		var frag:String = Paths.getTextFromFile('shaders/amongRgb.frag');
+		petRGB = new FlxRuntimeShader(frag);
+		petRGB.setFloatArray('green', [96 / 255, 208 / 255, 1]);
+		petRGB.setFloat('visor', 1);
+	}
 	
 	for (layer in pet.timeline.layers)
 	{
@@ -69,9 +73,16 @@ function onCreatePost()
 		});
 	}
 	pet.useRenderTexture = true;
-	
-	updateRGB(boyfriend);
 }
+
+function onCreatePost()
+{
+	applyPetRGB(pet);
+	pet.onChange.add(applyPetRGB);
+	
+	reloadPetRGB(boyfriend);
+}
+
 /**
 	* converts `FlxColor` into an array of `R, G, B` divided by 255 for the shader support
 **/
@@ -83,14 +94,17 @@ function convertColor(col:FlxColor = 0xFFFFFF):Array<Float> {
 	];
 	return colorArray;
 }
+
 /**
 	* Reloads the color shader depending on `based.healthColour`
 	```haxe
-	updateRGB(boyfriend);
+	reloadPetRGB(boyfriend);
 	```
 **/
-function updateRGB(?based:Character = boyfriend) {
-	if(overwriteColors.exists(based.curCharacter))
+public function reloadPetRGB(?based:Character = boyfriend) {
+	if (petRGB == null) return;
+	
+	if (overwriteColors.exists(based.curCharacter))
 	{
 		// if it has handmade colors assigned to it, get them from the map.
 		var color:Array<Float> = overwriteColors.get(boyfriend.curCharacter);

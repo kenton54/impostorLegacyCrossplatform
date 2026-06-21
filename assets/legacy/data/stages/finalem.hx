@@ -142,29 +142,29 @@ function onCreatePost()
 	modManager.setValue("alpha", 1, 1);
 	refreshZ();
 	
-		if (ClientPrefs.shaders)
+	if (ClientPrefs.shaders)
 	{
 		var blackRimlightBase:ExtraDropShadowShader = new funkin.game.shaders.ExtraDropShadowShader();
 		
-		blackRimlightBase.threshold = .1;
+		blackRimlightBase.threshold = .05;
 		blackRimlightBase.strength = .85;
 		blackRimlightBase.setColorMatrix([
-			.3, .5, -.2, 0, -50,
-			-.25, .1, .05, 0, 10,
-			.4, .25, .6, 0, -92,
+			.4, .5, -.2, 0, -50,
+			-.25, .7, -.15, 0, -20,
+			.42, -.35, .85, 0, -72,
 			0, 0, 0, 1, 0
 		]);
 		blackRimlightBase.addLayer([
-			.5, 0, 1, 0, 192,
-			.1, 1, -.5, 0, 64,
-			0, 0, .35, 0, 64,
+			.7, .5, 1, 0, 192,
+			.3, .4, -.5, 0, 64,
+			-.1, .2, .35, 0, 74,
 			0, 0, 0, 1, 0
 		], 10, 14, .01);
 		blackRimlightBase.addLayer(
 			blackRimlightBase.addLayer([
-				.9, .7, .4, 0, 4,
-				-.2, .3, .1, 0, -18,
-				.2, .2, .4, 0, -28,
+				.9, .6, .4, 0, 4,
+				-.2, .5, .1, 0, -18,
+				-.2, .2, .4, 0, -28,
 				0, 0, 0, 1, 0
 			], 12, 40, .01, .4)
 		.colorMatrix, 96, 24, .01, .4);

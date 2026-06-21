@@ -1,6 +1,6 @@
 function onKeyPress(k:Int):Void
 {
-	if (k == 2 && parent.getAnimName() == 'idle' && (tauntCharacter == null || tauntCharacter == parent))
+	if (k == 2 && parent.getAnimName() == 'idle' && (focusPlayer == null || focusPlayer == parent))
 	{
 		parent.playAnim('singUP');
 		parent.specialAnim = true;

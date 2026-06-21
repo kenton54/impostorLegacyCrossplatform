@@ -166,8 +166,8 @@
 	"no_antialiasing": false,
 	"image": "characters/bf/cosmicube/amongBf",
 	"position": [
-		-40,
-		245
+		-43,
+		323
 	],
 	"dance_every": 2,
 	"gameover_intial_sound": null,
@@ -177,14 +177,18 @@
 	"gameover_character": "amongbf-dead",
 	"vslice_sustains": false,
 	"flip_x": true,
-    "flags": {},
+    "flags": {
+		"variants":{
+			"weird": "amongbfweird"
+		}
+	},
 	"healthbar_colour": -13520687,
 	"camera_position": [
 		0,
 		0
 	],
 	"gameover_loop_sound": null,
-	"sing_duration": 4,
+	"sing_duration": 6,
 	"scale": 1.1,
 	"_editor_isPlayer": true
 }

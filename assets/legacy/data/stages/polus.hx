@@ -59,7 +59,7 @@ function onLoad()
 function onCreatePost()
 {
 	camSpecialThing([470, 250], [820, 250]);
-	if (gf.curCharacter == 'gf-ghost')
+	if (gf.curCharacter == 'gf-ghost' && curSong.toLowerCase() != 'top 10')
 	{
 		speaker.alpha = 1;
 		gf.y -= 240;

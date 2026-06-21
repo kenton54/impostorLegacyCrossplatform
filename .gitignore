@@ -6,6 +6,7 @@ dump/*
 # yeah ok sure
 **/content/*
 !content/securitydlc
+!content/mods-go-here.txt
 
 ### Mac
 .DS_Store

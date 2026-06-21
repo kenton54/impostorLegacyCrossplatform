@@ -93,10 +93,10 @@ class FunkinSprite extends FlxAnimate
 		{
 			path = path.trim();
 			
-			final isAtlasSprite = FunkinAssets.exists(Paths.getPath('images/$path/Animation.json', null, true, mode));
+			final isAtlasSprite = FunkinAssets.exists(Paths.getPath('images/$path/Animation.json', mode));
 			if (isAtlasSprite)
 			{
-				var atlas = FlxAnimateFrames.fromAnimate(Paths.getPath('images/$path', null, true, mode), null, null, null, false, settings ?? {cacheOnLoad: true});
+				var atlas = FlxAnimateFrames.fromAnimate(Paths.getPath('images/$path', mode), null, null, null, false, settings ?? {cacheOnLoad: true});
 				if (atlas != null)
 				{
 					for (spritemap in cast(atlas.parent, FlxAnimateSpritemapCollection).spritemaps)

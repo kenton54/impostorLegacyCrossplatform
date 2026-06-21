@@ -3,10 +3,10 @@
 	"defaultZoom": 0.55,
 	"isPixelStage": false,
 
-	"boyfriend": [2170, 290],
-	"girlfriend": [300, 150],
+	"boyfriend": [2088, 310],
+	"girlfriend": [280, 170],
 	"opponent": [-75, 275],
-	"pet": [1800, 800],
+	"pet": [1825, 810],
 	"bfZIndex": 3,
 	
 	"flags": {

@@ -61,8 +61,6 @@ var camTwistIntensity:Float = 0;
 var camTwistIntensity2:Float = 3;
 var camTwist:Bool = false;
 
-public var tauntCharacter:Character;
-
 function onLoad()
 {
 	hasBfSkin = (ClientPrefs.bfSkin != 'default' && !isStoryMode);
@@ -85,7 +83,7 @@ function onCreatePost()
 	WATERMARK.setPosition((FlxG.width - WATERMARK.width), (FlxG.height - WATERMARK.height));
 	add(WATERMARK);
 	
-	DebugDisplay.addPlugin(() -> ('[ TAB to expand or collapse dev info ]' + (showDevInfo ? dbText : '')));
+	DebugDisplay.addPlugin(() -> ('[ TAB to hide or show debug menu ]' + (showDevInfo ? dbText : '')));
 }
 
 /**
@@ -222,22 +220,19 @@ function onPopUpScorePost(note, rating)
 
 function onUpdate(elapsed)
 {
-	if (controls.NOTE_TAUNT_P && !inCutscene && !cpuControlled)
-	{
-		var tauntCharacter:Character = (tauntCharacter ?? boyfriend);
-		
-		if (tauntCharacter.hasAnim('hey'))
-		{
-			tauntCharacter.playAnim('hey');
-			tauntCharacter.specialAnim = tauntCharacter.holding = true;
-		}
-	}
-	
 	if (!ClientPrefs.inDevMode) return;
 	if (FlxG.keys.justPressed.TAB)
 	{
 		showDevInfo = !showDevInfo;
-		dbGroup.visible = !dbGroup.visible;
+		
+		if (showDevInfo)
+		{
+			game.add(dbGroup);
+		}
+		else
+		{
+			game.remove(dbGroup, true);
+		}
 	}
 	
 	if (showDevInfo)
@@ -275,23 +270,6 @@ function onUpdate(elapsed)
 			+ notes.length;
 	}
 }
-
-function setTauntCharacter(note:Note)
-{
-	final playField = note.playField;
-	
-	if (playField?.isPlayer) // jsut made some bullshit
-	{
-		tauntCharacter = (note.owner ?? (note.gfNote ? gf : null));
-		tauntCharacter ??= (note.singers == null ? playField.owner : note.singers[0]);
-		
-		if (tauntCharacter == boyfriend) tauntCharacter = null; // ok
-	}
-}
-
-function noteMiss(note:Note) setTauntCharacter(note);
-function goodNoteHit(note:Note) setTauntCharacter(note);
-function extraNoteHit(note:Note) setTauntCharacter(note);
 
 public function getBool(sss:String, bbb:Bool, ?withSlashN:Bool = true):String
 {
@@ -445,6 +423,11 @@ function onEvent(eventName, value1, value2)
 			// gamez = _intensity;
 			beatsPerZoom = _interval;
 	}
+}
+
+function onSongStart()
+{
+	//boyfriend = null;
 }
 
 function onStepHit()

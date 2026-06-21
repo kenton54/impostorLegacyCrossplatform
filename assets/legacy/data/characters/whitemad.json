@@ -155,7 +155,7 @@
 	"scalableOffsets": false,
 	"gameover_confirm_sound": null,
 	"healthicon": "whitewhomad",
-	"gameover_character": null,
+	"gameover_character": "whitewho-dead",
 	"vslice_sustains": false,
 	"flip_x": true,
 	"healthbar_colour": -1119757,
@@ -164,7 +164,7 @@
 		290
 	],
 	"gameover_loop_sound": null,
-	"sing_duration": 4,
+	"sing_duration": 6,
 	"scale": 1,
 	"_editor_isPlayer": true
 }

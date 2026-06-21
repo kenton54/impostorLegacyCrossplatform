@@ -2,7 +2,7 @@
 TWITTER ACCOUNT: @VSIMPOSTOR
 WEBSITE: https://vsimpostor.com/
 
-# SUPPORTED LANGUAGES (As of V1)
+# SUPPORTED LANGUAGES (as of 1.1.1)
 - English (United States)
 - English (United Kingdom)
 - French
@@ -33,9 +33,96 @@ WEBSITE: https://vsimpostor.com/
 - Danish
 - Dutch
 - Thai
+- Vietnamese
+- Lithuanian
 
 # CHANGELOG
-Current version: **1.1.0**
+Current version: **1.1.1b**
+
+## 1.1.1b (june 21 2026)
+  
+### Bugfixes
+- Fixed dialogue and its cohorts from only the assets folder, resulting in modded dialogue crashing.
+- Lights Down correctly changes the current character if skins are equipped.
+- Clipping in Voting Time background fixed.
+
+### For developers
+These will only affect those who work on mods for Legacy
+- All events have descriptions to hopefully note what they do.
+
+## 1.1.1 (june 21 2026)
+
+### Additions
+- **2 new languages have been added:**
+	- Lithuanian
+	- Vietnamese
+- Added Change Noteskin event.
+- Tabs at the top of the Freeplay Menu now scroll.
+- Added `"defeat"`, `"retro"`, `"dark"` (for Lights Down) and `"monotone"` (for Identity Crisis) skin variants.
+- Added a `canTaunt` variable to characters.
+- Girlfriend can now react in D'low.
+- Added Mira GF easter egg to Grey stage.
+- Added more credits.
+- Pets and character groups now have signals for changing / preloading.
+- (For modders) Small improvements have been made to scripting.
+	- Added a `modFolder` variable.
+	- Added a `parent` variable to state and substate scripts.
+	- Plugin scripts can now share public variables.
+	- Defines are now supported.
+
+### Changes
+- Updated Voting Time background to be higher quality.
+	- Added a new celebrity cameo.
+- Updated Charles' sprite in Greatest Plan.
+	- Lingering lag doesn't happen anymore.
+	- Charles now has afterimages.
+- Can no longer taunt during the tragedy in D'low.
+- Text in Identity Crisis is now better synced.
+- Updated Lights Down lighting for skins.
+- Rebalanced coloring for skins in Defeat and Reactor.
+- Identity Crisis now supports flags and variants for characters and pets.
+- Pet animations don't loop by default anymore.
+- Increased sing lengths for characters.
+- Updated behavior for playback rate.
+- Halved BPM for Reactor.
+- Updated `Paths` functions.
+- Updated Dev Mode cheat menu.
+- You can now hold Shift + 3 to slow time down in Dev mode.
+
+### Bugfixes
+- Fixed a crash when leaving the Character Editor.
+- Fixed icon position delay.
+- Fixed FC status desync.
+- Attempted to fix a bug in Turbulence after the song ends.
+- Added a failsafe for Double Trouble not showing up in Freeplay.
+- Fixed some errors with some charts:
+	- Ashes (removed a stray note)
+	- Delusion (some parts in Grey's side incorrectly charted)
+	- Reactor (added a missing note)
+- Some skins in Identity Crisis should be properly centered now.
+- Negative beans amounts aren't shown when completing a song anymore.
+- Black's Double Kill sprites are smoother again.
+- Fixed Afterimages option no longer appearing.
+- Fixed miscellaneous bugs with skins and pets.
+- Fixed an error where plugin scripts wouldn't execute.
+- Fixed incorrect currency icon and sound after completing a song when using mods.
+- Fixed an animation bug with Boyfriend's sprites in Ejected and Danger.
+- Fixed a bug with Boyfriend in Reinforcements.
+- Fixed a coloring error in the Toppat Chopper.
+- Fixed Double Kill overlay transparency.
+- Fixed Tuesday GF position and bop time.
+- Fixed Legacy events not showing up on the Chart Editor.
+- Fixed Auto Pause option not applying after relaunching the game.
+- Fixed a BPM issue with the Adjust Delay menu when opened from the Pause menu.
+- Fixed a bug with Identity Crisis pets being tilted after Green's parts.
+- Fixed an incorrect game over sprite in Who.
+- Red Mungus' strumline no longer appears with Opponent Notes disabled.
+- Girlfriend can no longer appear in Top 10.
+- Henry's idle plays correctly in Greatest Plan.
+- Fixed incorrectly sized Character Editor UI box.
+- Parasite Black's glint is now correctly displayed.
+- Playable Yellow's colors fixed.
+- Generic Gameover offsets fixed.
 
 ## 1.1.0 (june 10 2026)
 
@@ -115,7 +202,6 @@ It's like, hd now
     - Double Kill (Adjustments to note timings & patterns)
     - Ashes (Major pattern adjustments)
     - Magmatic (Pattern adjustments)
-    - Delusion (Literally changed 1 note)
     - Blackout (Minor pattern restructure & nerfed intro) (Removed doubled camera events)
     - Neurotic (Pattern adjustments & removed unneccesary sustains) (Removed doubled camera events)
     - Heartbeat (Minor pattern adjustments)

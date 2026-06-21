@@ -80,6 +80,12 @@ var credits:Array<CreditInfo> = [
 	{icon: 'jakehomys', name: 'JakeHomys'},
 	{icon: 'steginite', name: 'Steginite'},
 	{icon: 'db', name: 'Terdlestuff'},
+	{icon: 'sussteve', name: 'sussteve'},
+	{icon: 'unknown', name: 'Moonmistt'},
+	{icon: 'lunaxis', name: 'Lunaxis'},
+	{icon: 'philiplol', name: 'Philiplol'},
+	{icon: 'top', name: 'Top 10 Awesome'},
+	{icon: 'fungiwizard', name: 'FungiWizard'},
 	{name: 'Localization'},
 	{icon: 'flags/portuguese', name: 'Apoto'},
 	{icon: 'flags/turkish', name: 'BulutMete'},
@@ -116,9 +122,12 @@ var credits:Array<CreditInfo> = [
 	{icon: 'flags/romanian', name: 'ywllo'},
 	{icon: 'flags/danish', name: 'Certain Bubble'},
 	{icon: 'flags/german', name: 'IrrationalBunches'},
+	{icon: 'flags/kazakhstan', name: 'Kimirittoz'},
 	{icon: 'flags/russia', name: 'Тøха'},
 	{icon: 'flags/brazil', name: 'SquidBoy84'},
 	{icon: 'flags/brazil', name: 'Thales'},
+	{icon: 'flags/lithuania', name: 'LeNinethGames'},
+	{icon: 'flags/vietnam', name: 'Kyzoro'},
 	{name: 'Playtesters'},
 	{icon: 'none', name: 'angel'},
 	{icon: 'none', name: 'lemlem_mew'},
@@ -226,30 +235,30 @@ function onLoad():Void
 		var dlcEntries:Array<Dynamic> = [
 			{name: 'DLC'},
 			{icon: 'kim', name: 'Kimirittoz'},
-			{icon: 'none', name: 'Ra_TanG'},
-			{icon: 'none', name: 'rodreal'},
-			{icon: 'none', name: 'vonspad'},
-			{icon: 'none', name: 'Remi'},
-			{icon: 'none', name: 'itz.maow'},
-			{icon: 'none', name: 'widecod'},
-			{icon: 'none', name: 'Kiiismet'},
-			{icon: 'none', name: 'JakeHomys'},
-			{icon: 'none', name: 'mikeylm2'},
-			{icon: 'none', name: 'mango_21'},
-			{icon: 'none', name: 'Kakow0'},
-			{icon: 'none', name: 'emi3'},
-			{icon: 'none', name: 'Fllics'},
-			{icon: 'none', name: 'seotoo'},
-			{icon: 'none', name: 'Cryfur'},
-			{icon: 'none', name: 'Olivashko'},
-			{icon: 'none', name: 'Dragon Bluey'},
-			{icon: 'none', name: 'Steginite'},
-			{icon: 'none', name: 'Crash'},
-			{icon: 'none', name: 'Bixteus'},
-			{icon: 'none', name: 'GamerZone'},
-			{icon: 'none', name: 'DeepFriedBolognese'},
-			{icon: 'none', name: 'kokosan'},
-			{icon: 'none', name: 'GallyCidPizza'},
+			{icon: 'dlc', name: 'Ra_TanG'},
+			{icon: 'dlc', name: 'rodreal'},
+			{icon: 'dlc', name: 'vonspad'},
+			{icon: 'dlc', name: 'Remi'},
+			{icon: 'dlc', name: 'itz.maow'},
+			{icon: 'dlc', name: 'widecod'},
+			{icon: 'dlc', name: 'Kiiismet'},
+			{icon: 'dlc', name: 'JakeHomys'},
+			{icon: 'dlc', name: 'mikeylm2'},
+			{icon: 'dlc', name: 'mango_21'},
+			{icon: 'dlc', name: 'Kakow0'},
+			{icon: 'dlc', name: 'emi3'},
+			{icon: 'dlc', name: 'Fllics'},
+			{icon: 'dlc', name: 'seotoo'},
+			{icon: 'dlc', name: 'Cryfur'},
+			{icon: 'dlc', name: 'Olivashko'},
+			{icon: 'dlc', name: 'Dragon Bluey'},
+			{icon: 'dlc', name: 'Steginite'},
+			{icon: 'dlc', name: 'Crash'},
+			{icon: 'dlc', name: 'Bixteus'},
+			{icon: 'dlc', name: 'GamerZone'},
+			{icon: 'dlc', name: 'DeepFriedBolognese'},
+			{icon: 'dlc', name: 'kokosan'},
+			{icon: 'dlc', name: 'GallyCidPizza'},
 		];
 		
 		for (i in 0...dlcEntries.length)
@@ -528,7 +537,7 @@ function loadCredits():Void
 		
 		if (credit.image != null)
 		{
-			var image:FlxSprite = creditCluster.add(new FlxSprite(0, 0, Paths.image(credit.image)));
+			var image:FlxSprite = creditCluster.add(new FlxSprite(0, 0, Paths.image(credit.image, null, null, PathsTestMode.LOOSE)));
 			
 			image.scale.set(credit.scale ?? 1, credit.scale ?? 1);
 			image.updateHitbox();
@@ -560,8 +569,8 @@ function loadCredits():Void
 			var iconPath:String = 'credits/icons/' + credit.icon;
 			if (isFlagIcon) iconPath = 'credits/icons/flags/' + credit.icon.substr(6);
 			
-			final iconExists:Bool = Paths.fileExists('images/' + iconPath + '.png');
-			var icon:FlxSprite = new FlxSprite(0, 0, Paths.image(iconExists ? iconPath : 'credits/icons/unknown'));
+			final iconExists:Bool = Paths.fileExists('images/$iconPath.png', null, PathsTestMode.LOOSE);
+			var icon:FlxSprite = new FlxSprite(0, 0, Paths.image(iconExists ? iconPath : 'credits/icons/unknown', null, null, PathsTestMode.LOOSE));
 			
 			icon.visible = iconExists;
 			icon.shader = newShader('outline2');

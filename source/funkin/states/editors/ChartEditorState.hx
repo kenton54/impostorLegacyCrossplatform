@@ -184,7 +184,7 @@ class ChartEditorState extends MusicBeatState
 			"Value 1: Character to change (Dad, BF, GF)\nValue 2: New character's name"
 		],
 		// my auto formatter is forcing it to be liek this. i will fix it later
-		['Change Noteskin', 'Value 1: name of the noteskin json to change to.\nValue 2: ID of strum to change. (0 -> player, 1 -> opponent, etc)'],
+		['Change Noteskin', 'Changes the Noteskin of a specific strumline.\n\nValue 1: Name of the Noteskin to change to\nValue 2: ID of the Strumline (0 = Player, 1 = Opponent, etc.)'],
 		['Change Scroll Speed', "Value 1: Scroll Speed Multiplier (1 is default)\nValue 2: Time it takes to change fully in seconds."],
 		['Set Property', "Value 1: Variable name\nValue 2: New value"],
 		['HUD Fade', "Fades the HUD camera\n\nValue 1: Alpha\nValue 2: Duration"],
@@ -1439,7 +1439,7 @@ class ChartEditorState extends MusicBeatState
 		
 		#if MODS_ALLOWED
 		var eventPushedMap:Map<String, Bool> = new Map<String, Bool>();
-		var directories:Array<String> = [];
+		var directories:Array<String> = [Paths.getCorePath('data/events/'), Paths.getCorePath('events/')];
 		
 		#if MODS_ALLOWED
 		directories.push(Paths.mods('data/events/'));
@@ -1838,7 +1838,7 @@ class ChartEditorState extends MusicBeatState
 		
 		try
 		{
-			final oppVocals:Null<Sound> = Paths.voices(currentSongName, 'opp', true);
+			final oppVocals:Null<Sound> = Paths.voices(currentSongName, 'opp');
 			if (oppVocals != null)
 			{
 				opponentVocals.loadEmbedded(oppVocals);

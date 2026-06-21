@@ -6,5 +6,8 @@
 	"boyfriend": [1050, 90],
 	"girlfriend": [500, 100],
 	"opponent": [-30, 100],
-	"secondopp": [-60, 210]
+	"secondopp": [-60, 210],
+	"flags":{
+		"weird": true
+	}
 }

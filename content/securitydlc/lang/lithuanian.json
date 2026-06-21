@@ -1,0 +1,157 @@
+{
+	"lang": {
+		"cutscene_dontlied0": "*kikena*",
+		"cutscene_dontlied1": "Tu negausi mane šiandien!",
+		"cutscene_dontlied2": "Vėėėėpla!",
+		
+		"yellowspeaker_name": "Geltonas Garsikalbiai",
+		"yellowspeaker_hint": "Atlik savo darbus!",
+		"yellowspeaker_desc": "Prašau, liautis tinginiauti!",
+		"blackspeaker_name": "Juodas Garsikalbiai",
+		"blackspeaker_hint": "Grėsmė tavo saugumui",
+		"blackspeaker_desc": "Koks košmaras (tik kai kuriems).",
+		"whitespeaker_name": "Baltas Garsikalbiai",
+		"whitespeaker_hint": "Atrastas tikėjimas.",
+		"whitespeaker_desc": "Jis turi sustoti slėpti va taip.",
+		"triplespeaker_name": "Triple Trouble Garsikalbiai",
+		"triplespeaker_hint": "Atrakinta gaunamas rangas A arba aukštesnis daine Triple Threat.",
+		"triplespeaker_desc": "Atrodo, kad nesupranti.",
+		"speakermungus_name": "Mungus ir Jorsawsee Garsikalbiai",
+		"speakermungus_hint": "Tobula pagalvė.",
+		"speakermungus_desc": "Ateina su garsiuoju krepšininku!",
+		"alien_name": "Ateivis", //alien homimid reference
+		"alien_hint": "Invazinės rūšys.",
+		"alien_desc": "Nepaprastai paslaptinga geltonkaudžių dvikojų rūšis iš nežinomos planetos.",
+		"aquarium_name": "Akvuariumas", //fish in an aquarium
+		"aquarium_hint": "Gelbėjimo Tarnyba", //because the fish got saved
+		"aquarium_desc": "Kvėpuok naujame gyvenime!",
+		"bfweird_name": "Keistas Bernas",
+		"bfweird_hint": "Išskirtinis DLC",
+		"bfweird_desc": "Kažkoks UPDOG biznesas čia...", //reference to UPDOG
+		"gfweird_name": "Kiesta Merga",
+		"gfweird_hint": "Išskirtinis DLC",
+		"gfweird_desc": "Naujas dažų sluoksnis!",
+		"birdpostor_name": "Paukštpostoris",
+		"birdpostor_hint": "Neleisk, kad tave erzintų.",
+		"birdpostor_desc": "Argi ne smagu tiesiog išeiti į lauką ir pamaitinti paukščius!",
+		"blake_name": "Blake",
+		"blake_hint": "O dieve.",
+		"blake_desc": "Užkišk šį vaikiną ant bėgimo takelio!!",
+		"bobby_name": "Bobby",
+		"bobby_hint": "Jis tikrai ne Imposteris!", //https://www.youtube.com/watch?v=KByREO4gB0M&list=RDKByREO4gB0M&start_radio=1
+		"bobby_desc": "Net jeigu jis būtų, tai jis jo nebūtų, nes jis nėra toks!",
+		"chefplayable_name": "Šefas",
+		"chefplayable_hint": "Atrakinta gaunamas rangas A arba aukštesnis daine Sauces Moogus.",
+		"chefplayable_desc": "A klasės šefas.",
+		"deadnoob49_name": "Mirtas Noob49",
+		"deadnoob49_hint": "Tiesiog išmeskite jį pro galines duris.",
+		"deadnoob49_desc": "Dingęs asmuo, jau ne dingęs!",
+		"detectiveplayer_name": "Detektivas",
+		"detectiveplayer_hint": "Atrakinta gaunamas rangas A arba aukštesnis daine Suspect.",
+		"detectiveplayer_desc": "Priversti šito \"Crewmate\" prisipažinti bvo toks Challengas.", //reference to Crewmate Challenge (cancelled mod)
+		"evilbf_name": "BLOGUS BERNAS",
+		"evilbf_hint": "Kaip BLOGUS jis gali būti?",
+		"evilbf_desc": "Nieko sau! Jis turi peilį!.. Na viskas.",
+		"fatogus_name": "Fatogus",
+		"fatogus_hint": "Brraaaap.",
+		"fatogus_desc": "Atsiprašau...",
+		"yellow-ghost_name": "Geltonas Vaiduoklis",
+		"yellow-ghost_hint": "Gal vietuoj to atlik savo darbus???",
+		"yellow-ghost_desc": "Kodėl ji vis miršta?!",
+		"twin_name": "Dvynys",
+		"twin_hint": "Geriausi broliai.",
+		"twin_desc": "Amžinai ir amžinai!",
+		"tuesdayplayable_name": "Tomongus",
+		"tuesdayplayable_hint": "Jie padarė KO žaidžiama?!",
+		"tuesdayplayable_desc": "AWWWWW",
+		"tawny_name": "Taunis",
+		"tawny_hint": "Nesileisk sau apsimesti.", //reference to a mod Fakeout!
+		"tawny_desc": "Tiek kankinimo.", //because i drew tawny getting tortured a lot
+		"suslet_name": "Susletas", //pokemon Wiglet
+		"suslet_hint": "O dieve o dieve.",
+		"suslet_desc": "Tai yra kirminas, bet su kojas, bet be kojų.", //doesnt mean anything
+		"sneep_name": "Sneep",
+		"sneep_hint": "Nenorėtų žinoti, ką jis padarė.",
+		"sneep_desc": "Vienintelis veikėjas Sneep spalvo!",
+		"shit_name": "Šudas",
+		"shit_hint": "Atrakinta gaunamas rangas F arba aukštesnis daine Triple Threat.",
+		"shit_desc": "Su jam geriau ne smulkmenti.", //refence to a mod TRIFFLE [its REFERENCE you moron]
+		"rgbpet_name": "RGBPet",
+		"rgbpet_hint": "Pritaikymas? Šiais laikais?",
+		"rgbpet_desc": "Suasmeninta pagal jūsų veikėjo spalvą arba sveikatos juostos spalvą.",
+		"noob49player_name": "Noob49",
+		"noob49player_hint": "Atrakinama užbaigus DLC Week.",
+		"noob49player_desc": "Tiesiog balsuokite už tą vaikiną jau.",
+		"looksie_name": "Looksie",
+		"looksie_hint": "Pažiūrėkim...",
+		"looksie_desc": "Aš pažiūrėsiu...", //both are gibberish [no longer!]
+		"longusgang_name": "Longus' Gang",
+		"longusgang_hint": "Atkeliauja partijoje.",
+		"longusgang_desc": "Ar žinojai kad šitie 3 pasimato visą šį laiką?",
+		"littlermungus_name": "Mažesnis Mungus",
+		"littlermungus_hint": "Jie tapo mažesnį kiekvieną laiką.",
+		"littlermungus_desc": "Ir šiandien jo gimtadienis!",
+		"LIMEGREENPlayable_name": "JADSPOSTOR",
+		"LIMEGREENPlayable_hint": "ŽALIA LIMĖTĖ KĄĄĄĄĄĄĄ???",
+		"LIMEGREENPlayable_desc": "JADS.",
+		"kickflip_name": "Dovidas Pammelas",
+		"kickflip_hint": "Vontastiškai!", //reference to a person named Von
+		"kickflip_desc": "Incredible! Rad! Perfect!", //because it does kickflips [not translating those, seemed better]
+		"gumpymando_name": "Gumpy ir Yarlowmando",
+		"gumpymando_hint": "Jų yra per daug! Sustokit!!",
+		"gumpymando_desc": "Pirmiausio vardas Gumpy ir antriausio Yarlowmando.",
+		"gruntus_name": "Gruntus", //grunt from madness combat
+		"gruntus_hint": "Chaotiškas Kovas!", //madness combat
+		"gruntus_desc": "Aš- mmm... Tai pakankamai.. arti?",
+		"greypet_name": "Pilvas Mini Crewmate",
+		"greypet_hint": "Atrakinta gaunamas rangas A arba aukštesnis daine 49.",
+		"greypet_desc": "Ar tai... potencialinis žuvikas?",
+		"goldennug_name": "Auksinis Nug",
+		"goldennug_hint": "Nieko Sau.",
+		"goldennug_desc": "Kaip tu galėjai.", //the pet costs 42000 beans
+		"tinyhenry_name": "Henry Stickmin",
+		"tinyhenry_hint": "Vagis, dingsta kaip Flash.", //reference to Flash games [yea no i couldnt do it any other way]
+		"tinyhenry_desc": "NePASIKLYSK!",
+		"bfblack_name": "BernaSUS", //black impostor in a bf cap playable
+		"bfblack_hint": "Tai arčiausiai, ką pasieksi tikram dalykui!",
+		"bfblack_desc": "Bėk iš čia.",
+		
+		// dialogue
+		"dialogue_490": "tai va dlc!",
+		"dialogue_491": "padėk padėk <:(",
+		"dialogue_492": "kur mano sūnųs? ar matai mano sūnų!??",
+		"dialogue_493": "jis va čia",
+		"dialogue_494": "Aš žinau aš su tavim juokiuosi.",
+		"dialogue_495": "pala",
+		"dialogue_496": "TAVO PINDAS SŪNŲS MANE NUŽUDĖ",
+		"dialogue_497": "DU KARTUS",
+		"dialogue_498": "Nesąmonė, jis niekada šito nedarytų!",
+		"dialogue_499": "aš niekada to nedariau.",
+		"dialogue_4910": "Matai?",
+		"dialogue_4911": " : (",
+		"dialogue_4912": "Bet ar gali tuo Patikėti? Aš gaunu visą Week!",
+		"dialogue_4913": "Viskas man!",
+		"dialogue_4914": "jo sekmės seni.",
+		"dialogue_dontlied0": "fuh!! aš džiaugiuosi, kad laiku pabėgau nuo Juodojo Imposterį.",
+		"dialogue_dontlied1": "palauk..............",
+		"dialogue_dontlied2": "o dieve!",
+		"dialogue_dontlied3": "tai violetinis!!",
+		"dialogue_dontlied4": "Aš Violetinis.",
+		"dialogue_dontlied5": "myliu tave violetinis",
+		"dialogue_suspect0": "Tai yra žudynės.", //this dialogue is unused, but might get readded in the future
+		"dialogue_suspect1": "tai...",
+		"dialogue_suspect2": "tu šitą padarėi?",
+		"dialogue_suspect3": "Ką?",
+		"dialogue_suspect4": "Aišku ne.",
+		"dialogue_suspect5": "gerai boss tai kas tada.",
+		"dialogue_suspect6": "Aš turių idėją.",
+		"dialogue_suspect7": "Manau Juodas tuo padarė.", //black impostor
+		"dialogue_suspect8": "bet tu joudas", //both detective and black impostor are black among us characters
+		"dialogue_suspect9": "Hm...",
+		"dialogue_detective": "Detektivas",
+		"dialogue_minigrey": "Mini Pilvas",
+		"dialogue_noob49": "Noob49",
+		"dialogue_pico": "Pico",
+	"dialogue_purple": "Violėtinis" //gender neutral if you can (or plural yeah) [cant 3: ]
+	}
+}

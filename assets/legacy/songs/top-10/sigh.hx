@@ -10,19 +10,6 @@ countdownSounds = false;
 
 function onCreatePost():Void
 {
-	for (group in [boyfriendGroup, dadGroup])
-	{
-		for (character in group)
-		{
-			character.camDisplacement = 0;
-			
-			for (anim in character.animation.getAnimationList()) anim.looped = true;
-		}
-	}
-	for (anim in pet.animation.getAnimationList()) anim.looped = true;
-	
-	FlxG.camera.zoom = defaultCamZoom = 1;
-	
 	strumTweens = [for (playField in playFields) [for (strum in playField) null]];
 	
 	FlxG.sound.load(Paths.sound('stage/topMiss'));

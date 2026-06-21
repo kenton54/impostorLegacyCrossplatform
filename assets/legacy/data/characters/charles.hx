@@ -1,25 +1,36 @@
-var cloud:FunkinSprite;
+import flixel.FlxSprite;
+
+public var charlesSpeed:Float = (ClientPrefs.flashing ? 1.3 : .8);
+
+var back:FlxSprite, sky:FlxSprite;
+var maskShader = newShader('charlesCloudMask'), maskOffset:Array<Float>;
 
 function onLoad()
 {
-	cloud = new FunkinSprite(-392, -274).loadAtlas('stages/henry/charlesClouds', {cacheOnLoad: false});
-	cloud.addAnimByPrefix('move', 'clouds moving', ClientPrefs.photosensitive ? 30 : 60, true);
-	cloud.scale.set(.8, .8);
-	cloud.playAnim('move');
-	cloud.origin.set();
+	back = new FlxSprite(0, 0, Paths.image('characters/henry/charles/charlesBg'));
+	back.scale.set(parent.scale.x, parent.scale.y);
+	back.updateHitbox();
 	
-	var cloudElement:FlxSpriteElement = new animate.internal.elements.FlxSpriteElement(cloud);
-	cloudElement.active = false;
+	sky = new FlxSprite(0, 0, Paths.image('characters/henry/charles/charlesBgBack'));
+	sky.scale.set(parent.scale.x, parent.scale.y);
+	sky.updateHitbox();
+	sky.screenCenter();
+	sky.shader = maskShader;
 	
-	parent.timeline.layers[2].forEachFrame((frame) -> frame.add(cloudElement));
+	dadGroup.insert(0, back);
+	dadGroup.insert(0, sky);
+	
+	var bmp = Paths.image('characters/henry/charles/skyClouds');
+	maskShader.setBitmapData('u_mask', bmp.bitmap);
+	maskShader.setFloatArray('u_mask_size', [bmp.width, bmp.height]);
+	maskShader.setFloatArray('u_mask_offset', [0, -.45]);
+	maskOffset = maskShader.data.u_mask_offset;
 }
 
-function onUpdate(elapsed)
+function onUpdatePost(elapsed)
 {
-	cloud.update(elapsed);
-}
-
-function onDestroy():Void
-{
-	cloud.destroy();
+	maskOffset.value[0] += (charlesSpeed * elapsed);
+	
+	back.setPosition(parent.x - 120, parent.y - 47);
+	sky.setPosition(parent.x + 75, parent.y - 34);
 }

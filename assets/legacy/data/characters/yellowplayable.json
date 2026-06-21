@@ -1,150 +1,171 @@
 {
+	"pausePortrait": "",
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"indices": [],
+			"name": "idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "left",
-			"indices": []
+			"indices": [],
+			"name": "left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
+			"indices": [],
+			"name": "down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "up",
-			"indices": []
+			"indices": [],
+			"name": "up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "right",
-			"indices": []
+			"indices": [],
+			"name": "right"
 		},
 		{
+			"loop": false,
+			"flipY": false,
 			"offsets": [
 				0,
 				0
 			],
-			"flipY": false,
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWNmiss",
-			"flipX": false,
+			"fps": 24,
+			"name": "dmiss",
 			"indices": [],
-			"name": "dmiss"
+			"flipX": false
 		},
 		{
+			"loop": false,
+			"flipY": false,
 			"offsets": [
 				0,
 				0
 			],
-			"flipY": false,
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFTmiss",
-			"flipX": false,
+			"fps": 24,
+			"name": "lmiss",
 			"indices": [],
-			"name": "lmiss"
+			"flipX": false
 		},
 		{
+			"loop": false,
+			"flipY": false,
 			"offsets": [
 				0,
 				0
 			],
-			"flipY": false,
-			"loop": false,
-			"fps": 24,
 			"anim": "singUPmiss",
-			"flipX": false,
+			"fps": 24,
+			"name": "umiss",
 			"indices": [],
-			"name": "umiss"
+			"flipX": false
 		},
 		{
+			"loop": false,
+			"flipY": false,
 			"offsets": [
 				0,
 				0
 			],
-			"flipY": false,
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"flipX": false,
+			"fps": 24,
+			"name": "rmiss",
 			"indices": [],
-			"name": "rmiss"
+			"flipX": false
 		},
 		{
+			"loop": false,
+			"flipY": false,
 			"offsets": [
 				0,
 				0
 			],
-			"flipY": false,
-			"loop": false,
-			"fps": 24,
 			"anim": "scared",
-			"flipX": false,
+			"fps": 24,
+			"name": "scared",
 			"indices": [],
-			"name": "scared"
+			"flipX": false
 		},
 		{
+			"loop": false,
+			"flipY": false,
 			"offsets": [
 				0,
 				0
 			],
-			"flipY": false,
-			"loop": false,
-			"fps": 24,
 			"anim": "hey",
-			"flipX": false,
+			"fps": 24,
+			"name": "hey",
 			"indices": [],
-			"name": "hey"
+			"flipX": false
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/bf/cosmicube/yellow-rip",
 	"position": [
 		-130,
-		295
+		285
 	],
 	"dance_every": 2,
 	"gameover_intial_sound": null,
+	"flags": {
+		"i mean": "it isnt really a ghost but like like yeah",
+		"variants": {
+			"customMonotone": "yellow",
+			"stabbed": "yellowplayablestabbed",
+			"alive": "yellow-ghost"
+		},
+		"turbulenceOffset": [
+			20,
+			110
+		],
+		"customMonotone": "yellow",
+		"ghost": true,
+		"finaleHealthBarColor": [
+			"0xFFFFD452",
+			"0xFFFFEC8E",
+			"0xFFE0893B"
+		]
+	},
 	"scalableOffsets": false,
 	"gameover_confirm_sound": null,
 	"healthicon": "yellow-dead",
+	"afterimages": true,
 	"gameover_character": null,
 	"vslice_sustains": false,
 	"flip_x": true,
@@ -154,17 +175,7 @@
 		-81
 	],
 	"gameover_loop_sound": null,
-	"sing_duration": 4,
+	"sing_duration": 6,
 	"scale": 0.8,
-	"_editor_isPlayer": true,
-	"flags": {
-		"variants": {
-			"alive": "yellow-ghost"
-		},
-		"turbulenceOffset": [20, 110],
-		"finaleHealthBarColor": ["0xFFFFD452", "0xFFFFEC8E", "0xFFE0893B"],
-		"customMonotone": "yellow",
-		"ghost": true,
-		"i mean": "it isnt really a ghost but like like yeah"
-	}
+	"_editor_isPlayer": true
 }

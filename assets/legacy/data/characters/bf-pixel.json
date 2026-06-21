@@ -131,7 +131,7 @@
 		-140
 	],
 	"gameover_loop_sound": null,
-	"sing_duration": 4,
+	"sing_duration": 6,
 	"scale": 6,
 	"_editor_isPlayer": true,
 	"flags": {

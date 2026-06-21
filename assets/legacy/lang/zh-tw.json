@@ -4,9 +4,9 @@
         "vcr.ttf": "NotoSansSC-SemiBold.ttf",
         "liber.ttf": "NotoSansSC-SemiBold.ttf",
         "liberbold.ttf": "NotoSansSC-ExtraBold.ttf",
+        "ariblk.ttf": "NotoSansSC-ExtraBold.ttf",
         "AmaticSC-Bold.ttf": "zh_zqbbt.ttf",
-        "AmaticSC-Regular.ttf": "zh_zqbbt.ttf",
-        "ariblk.ttf": "NotoSansSC-ExtraBold.ttf"
+        "AmaticSC-Regular.ttf": "zh_zqbbt.ttf"
     },
     "flags": {
     	"dialogueLeading": -10

@@ -250,7 +250,8 @@ class ExtraDropShadowShader extends flixel.system.FlxAssets.FlxShader
 				tinted = applyLayer(tinted, color, rimlightMultipliers1, rimlightOffsets1, getLayerIntensity(color, rimlightData1));
 				tinted = applyLayer(tinted, color, rimlightMultipliers0, rimlightOffsets0, getLayerIntensity(color, rimlightData0));
 				
-				gl_FragColor = vec4(tinted.rgb * tinted.a * openfl_Alphav, tinted.a * openfl_Alphav);
+				gl_FragColor = vec4(tinted.rgb * tinted.a, tinted.a);
+				if (hasTransform) gl_FragColor *= openfl_Alphav;
 			}
 		}
 		

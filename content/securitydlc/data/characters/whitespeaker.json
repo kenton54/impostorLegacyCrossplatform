@@ -21,6 +21,17 @@
 			"anim": "danceRight",
 			"indices": [],
 			"name": "idleright"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "sad",
+			"indices": [],
+			"name": "lmao"
 		}
 	],
 	"no_antialiasing": false,
@@ -43,7 +54,7 @@
 		0
 	],
 	"gameover_loop_sound": null,
-	"sing_duration": 4,
+	"sing_duration": 6,
 	"scale": 1,
 	"_editor_isPlayer": false
 }

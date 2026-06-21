@@ -8,10 +8,10 @@ function onLoad()
 function onCreatePost()
 {
 	fakeIcon = new HealthIcon('yellow-dead', false);
+	fakeIcon.visible = false;
 	fakeIcon.cameras = [camHUD];
 	fakeIcon.setPosition(playHUD.iconP2.x, playHUD.iconP2.y);
-	fakeIcon.visible = false;
-	add(fakeIcon);
+	playHUD.insert(playHUD.members.indexOf(playHUD.iconP2), fakeIcon);
 }
 
 function goodNoteHit(note)
@@ -34,21 +34,40 @@ function onEvent(eventName, value1, value2)
 	{
 		if (value1 == 'dlow death')
 		{
+			boyfriend.canTaunt = false;
+			if (!ClientPrefs.hideHud) fakeIcon.visible = true;
 			playHUD.iconP2.visible = false;
-			fakeIcon.visible = true;
+			
 			dad.playAnim('death');
 			dad.canDance = false;
 			camSpecialThing([450, 500], [450, 500], 0.7);
 			
-			if (boyfriend.curCharacter == 'bfsusreal')
+			// sigh
+			if (boyfriend.hasAnim('yellowReaction'))
 			{
-				boyfriend.playAnim('shoot', true);
+				boyfriend.playAnim('yellowReaction', true);
 				boyfriend.specialAnim = boyfriend.skipDance = true;
 			}
 			else if (boyfriend.hasAnim('scared'))
 			{
 				boyfriend.playAnim('scared', true);
 				boyfriend.specialAnim = boyfriend.skipDance = true;
+			}
+			
+			if (gf.hasAnim('yellowReaction'))
+			{
+				gf.playAnim('yellowReaction', true);
+				gf.specialAnim = gf.skipDance = true;
+			}
+			else if (gf.hasAnim('scared'))
+			{
+				gf.playAnim('scared', true);
+				gf.specialAnim = gf.skipDance = true;
+			}
+			else if (gf.hasAnim('sad'))
+			{
+				gf.playAnim('sad', true);
+				gf.specialAnim = gf.skipDance = true;
 			}
 			
 			if (boyfriend.curCharacter == 'yellowplayable') playHUD.iconP1.changeIcon('yellow');

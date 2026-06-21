@@ -1,5 +1,6 @@
-so like do it like this
-v1: dadX,dadY,bfX,bfY
-v2: defaultcamzoom
+Functionality: global
+sets the camera's positions depending on the turn like v4
+- value1: dadX,dadY,bfX,bfY
+- value2: defaultcamzoom
 
 i love looey from dandys world

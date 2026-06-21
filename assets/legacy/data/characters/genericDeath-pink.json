@@ -1,43 +1,44 @@
 {
+	"pausePortrait": "",
 	"animations": [
 		{
-			"offsets": [
-				-66,
-				72
-			],
-			"flipY": false,
 			"loop": false,
-			"fps": 24,
+			"flipY": false,
+			"offsets": [
+				-65,
+				70
+			],
 			"anim": "firstDeath",
-			"flipX": false,
+			"fps": 24,
+			"name": "Dies",
 			"indices": [],
-			"name": "Dies"
+			"flipX": false
 		},
 		{
+			"loop": true,
+			"flipY": false,
 			"offsets": [
 				27,
 				70
 			],
-			"flipY": false,
-			"loop": true,
-			"fps": 24,
 			"anim": "deathLoop",
-			"flipX": false,
+			"fps": 24,
+			"name": "Loop",
 			"indices": [],
-			"name": "Loop"
+			"flipX": false
 		},
 		{
+			"loop": false,
+			"flipY": false,
 			"offsets": [
 				261,
-				71
+				70
 			],
-			"flipY": false,
-			"loop": false,
-			"fps": 24,
 			"anim": "deathConfirm",
-			"flipX": false,
+			"fps": 24,
+			"name": "Confirm",
 			"indices": [],
-			"name": "Confirm"
+			"flipX": false
 		}
 	],
 	"no_antialiasing": false,
@@ -48,9 +49,11 @@
 	],
 	"dance_every": 2,
 	"gameover_intial_sound": null,
+	"flags": {},
 	"scalableOffsets": false,
 	"gameover_confirm_sound": null,
 	"healthicon": "bf",
+	"afterimages": true,
 	"gameover_character": "amongbf",
 	"vslice_sustains": false,
 	"flip_x": true,
@@ -60,7 +63,7 @@
 		86
 	],
 	"gameover_loop_sound": null,
-	"sing_duration": 4,
+	"sing_duration": 6,
 	"scale": 1,
 	"_editor_isPlayer": true
 }

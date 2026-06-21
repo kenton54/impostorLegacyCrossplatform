@@ -495,6 +495,8 @@ class ClientPrefs
 	 */
 	public static function load()
 	{
+		if (FlxG.save.data.autoPause != null) FlxG.autoPause = FlxG.save.data.autoPause;
+		
 		if (FlxG.save.data.volume != null) FlxG.sound.volume = FlxG.save.data.volume;
 		else FlxG.sound.volume = 0.6; // I'm doing them a fucking favor.
 		

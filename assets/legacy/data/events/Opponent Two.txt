@@ -1,2 +1,3 @@
-call light out
-if value1 is 1 then dont work if flashingLights is off
+Functionality: stage/song
+used only in stages/cargo.hx for some reason
+there are better ways of handling opponent two and even both opponent notes

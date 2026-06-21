@@ -149,8 +149,12 @@
 			"0xFF828299",
 			"0xFF282C4F"
 		],
-		"defeatRetro": "noob49retro",
-		"customMonotone": "noob49shift"
+		"variants": {
+			"defeat": "noob49dark",
+			"retro": "noob49retro",
+			"monotone": "noob49shift",
+			"stabbed": "noob49stabbed"
+		}
 	},
 	"scalableOffsets": false,
 	"gameover_confirm_sound": null,

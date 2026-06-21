@@ -16,35 +16,32 @@ function onLoad()
 		bars.add(bar);
 	}
 	
-	var voting1:FlxSprite = new FlxSprite(700, 125).loadGraphic(Paths.image(ext + 'back'));
-	voting1.scale.set(1.5, 1.5);
-	voting1.updateHitbox();
+	var voting1:FlxSprite = new FlxSprite(610, 168).loadGraphic(Paths.image(ext + 'back'));
+	voting1.scrollFactor.set(.93, .93);
 	add(voting1);
 	
-	// voting2
-	var voting2:FlxSprite = new FlxSprite(-430, -275).loadGraphic(Paths.image(ext + 'walls something'));
-	voting2.scale.set(1.5, 1.5);
-	voting2.updateHitbox();
+	var voting2:FlxSprite = new FlxSprite(-472, -295).loadGraphic(Paths.image(ext + 'front'));
+	voting2.scrollFactor.set(.95, .97);
 	add(voting2);
 	
+	var jorsawsee:FlxSprite = new FlxSprite(1690, 480).loadGraphic(Paths.image(ext + 'jorsawsee'));
+	jorsawsee.scrollFactor.set(.975, .99);
+	jorsawsee.scale.set(.7, .7);
+	jorsawsee.updateHitbox();
+	add(jorsawsee);
+	
 	var votinguh:FlxSprite = new FlxSprite(500, 590).loadGraphic(Paths.image(ext + 'chair3'));
-	votinguh.scale.set(1.2, 1.2);
-	votinguh.updateHitbox();
+	votinguh.scrollFactor.set(.95, .95);
 	add(votinguh);
 	
-	// voting3
-	var voting3:FlxSprite = new FlxSprite(150, 625).loadGraphic(Paths.image(ext + 'chair2'));
-	voting3.scale.set(1.4, 1.4);
-	voting3.updateHitbox();
+	var voting3:FlxSprite = new FlxSprite(160, 625).loadGraphic(Paths.image(ext + 'chair2'));
+	voting3.scrollFactor.set(.98, .98);
 	add(voting3);
 	
-	// voting4
-	var voting4:FlxSprite = new FlxSprite(-180, 700).loadGraphic(Paths.image(ext + 'chair1'));
-	voting4.scale.set(1.5, 1.5);
-	voting4.updateHitbox();
+	var voting4:FlxSprite = new FlxSprite(-190, 700).loadGraphic(Paths.image(ext + 'chair1'));
 	add(voting4);
 	
-	redmungus = new Character(1775, 200, 'madgus');
+	redmungus = new Character(1760, 225, 'madgus');
 	game.startCharacterPos(redmungus);
 	add(redmungus);
 	redmungus.scale.set(1.2, 1.2);
@@ -57,6 +54,12 @@ function onCreatePost()
 	redmungus.zIndex = 2;
 	for (playField in playFields)
 		if (playField.ID != 0) playField.playerControls = false;
+	
+	pet.scrollFactor.set(.95, .94);
+	gf.scrollFactor.set(1.05, 1);
+	redmungus.scrollFactor.set(.96, 1);
+	boyfriend.scrollFactor.set(.95 /* genius! */, 1.05);
+	dad.scrollFactor.set(1.05, 1.05);
 		
 	game.boyfriend.scale.x *= 1.2;
 	game.boyfriend.scale.y *= 1.2;
@@ -64,20 +67,23 @@ function onCreatePost()
 	game.boyfriend.updateHitbox();
 	game.boyfriend.offset.set();
 	game.boyfriend.dance();
-	var voting5:FlxSprite = new FlxSprite(-140, 680).loadGraphic(Paths.image(ext + 'table'));
-	voting5.scale.set(1.5, 1.5);
+	var voting5:FlxSprite = new FlxSprite(-90, 732).loadGraphic(Paths.image(ext + 'table'));
+	voting5.scale.set(1.5 / 1.8, 1.5 / 1.8);
+	voting5.scrollFactor.set(1.04, 1.15);
 	voting5.updateHitbox();
 	voting5.zIndex = 3;
 	add(voting5);
 	
-	var voting6:FlxSprite = new FlxSprite(-428, -170).loadGraphic(Paths.image(ext + 'light'));
-	voting6.scale.set(1.5, 1.5);
+	var voting6:FlxSprite = new FlxSprite(-428, 20).loadGraphic(Paths.image(ext + 'light'));
+	voting6.scrollFactor.set(.7, .8);
+	voting6.scale.set(6, 6);
 	voting6.updateHitbox();
 	voting6.blend = BlendMode.ADD;
+	voting6.alpha = .8;
 	voting6.zIndex = 3;
 	add(voting6);
 	
-	snapCamToPos(1275, 575);
+	snapCamToPos(1205, 575);
 	// snapCamToPos(1800, 575);
 	game.isCameraOnForcedPos = true;
 	
@@ -90,7 +96,7 @@ function onCreatePost()
 		final orgID = (3 - i.ID);
 		final wrap = Math.floor(orgID / 2) == 1;
 		
-		if (i.ID != 0) i.visible = ClientPrefs.opponentStrums;
+		i.visible = (i.ID == 0 || ClientPrefs.opponentStrums);
 		
 		if (wrap)
 		{
@@ -112,7 +118,7 @@ function onCreatePost()
 			final space = 865;
 			
 			if (!ClientPrefs.middleScroll) modManager.setValue("transformX", i.ID == 2 ? -(space) : space, i.ID);
-			else i.visible = i.ID == 0 || i.ID == 3;
+			else if (!ClientPrefs.opponentStrums) i.visible = false;
 			// modManager.setValue("")
 		}
 	}
@@ -121,6 +127,11 @@ function onCreatePost()
 	
 	if (boyfriend.gameoverLoopDeathSound == null) boyfriend.gameoverLoopDeathSound = 'Jorsawsee_Loop';
 	if (boyfriend.gameoverConfirmDeathSound == null) boyfriend.gameoverConfirmDeathSound = 'Jorsawsee_End';
+}
+
+function onCountdownTick(tick:Int)
+{
+	if (tick < 4) redmungus.onBeatHit(curBeat);
 }
 
 function onBeatHit()
@@ -145,8 +156,8 @@ function onEvent(eventName, value1, value2)
 		case 'Cam lock in Voting Time':
 			if (value1 == 'in')
 			{
-				FlxG.camera.zoom = 1;
-				defaultCamZoom = 1;
+				FlxG.camera.zoom = .9;
+				defaultCamZoom = .9;
 				
 				if (value2 == 'dad')
 				{
@@ -161,8 +172,8 @@ function onEvent(eventName, value1, value2)
 			}
 			else if (value1 == 'close')
 			{
-				FlxG.camera.zoom = 1.05;
-				defaultCamZoom = 1.05;
+				FlxG.camera.zoom = 1;
+				defaultCamZoom = 1;
 				
 				if (value2 == 'dad')
 				{
@@ -179,7 +190,7 @@ function onEvent(eventName, value1, value2)
 			{
 				defaultCamZoom = 0.55;
 				FlxG.camera.zoom = 0.55;
-				snapCamToPos(1275, 575);
+				snapCamToPos(1205, 575);
 			}
 			
 		case 'Play Animation':

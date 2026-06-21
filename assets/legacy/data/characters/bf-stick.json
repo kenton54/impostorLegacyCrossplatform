@@ -131,7 +131,7 @@
 		0
 	],
 	"gameover_loop_sound": "stickbf_death_loop",
-	"sing_duration": 4,
+	"sing_duration": 6,
 	"scale": 1,
 	"_editor_isPlayer": true,
 	"flags": {

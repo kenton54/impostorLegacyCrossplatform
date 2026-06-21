@@ -1,28 +1,109 @@
 {
+	"pausePortrait": "",
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"fps": 24,
+			"loop": false,
 			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "loopidle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "raiseKnife",
+			"fps": 24,
+			"name": "KnifeRaise",
 			"indices": [],
-			"name": "idle"
+			"flipX": false
+		},
+		{
+			"loop": false,
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "lowerKnife",
+			"fps": 24,
+			"name": "KnifeLower",
+			"indices": [],
+			"flipX": false
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"flipY": false,
+			"loop": true,
+			"fps": 24,
+			"anim": "idleKnife",
+			"flipX": false,
+			"indices": [],
+			"name": "KnifeIdle"
+		},
+		{
+			"loop": false,
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "kill",
+			"fps": 24,
+			"name": "knife toss",
+			"indices": [],
+			"flipX": false
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"flipX": false,
+			"flipY": false,
+			"anim": "idle-loop",
+			"loop": false,
+			"name": "idle-looploopidle"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/gf/cosmicube/speakerblack",
 	"position": [
-		-17,
-		-267
+		-14,
+		-413
 	],
 	"dance_every": 1,
 	"gameover_intial_sound": null,
+	"flags": {
+		"backlit": true
+	},
 	"scalableOffsets": false,
 	"gameover_confirm_sound": null,
 	"healthicon": "black",
+	"afterimages": true,
 	"gameover_character": null,
 	"vslice_sustains": false,
 	"flip_x": false,
@@ -32,10 +113,7 @@
 		0
 	],
 	"gameover_loop_sound": null,
-	"sing_duration": 4,
+	"sing_duration": 6,
 	"scale": 1,
-	"_editor_isPlayer": false,
-	"flags": {
-		"backlit": true
-	}
+	"_editor_isPlayer": false
 }

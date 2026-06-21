@@ -57,9 +57,9 @@ class VisualsUISubState extends BaseOptionsMenu
 		
 		var option:Option = new Option(Lang.str('opt_afterimages', 'Afterimages'), Lang.str('opt_afterimages_desc', "Characters will leave afterimages on double notes. Uncheck to disable."),
 			'jumpGhosts', 'bool', true);
+		addOption(option);
 		
 		var option:Option = new Option(Lang.str('opt_discord', 'Discord'), Lang.str('opt_discord_desc'), 'discordRPC', 'bool', true);
-			
 		addOption(option);
 		
 		spacerBeforeIdx = optionsArray.length;

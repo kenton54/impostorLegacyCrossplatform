@@ -55,7 +55,7 @@ typedef MetaVariables =
 	{
 		var json:MetaVariables = null;
 		
-		final path = Paths.getPath('$filePath.json', null, true);
+		final path = Paths.getPath('$filePath.json', NORMAL);
 		if (FunkinAssets.exists(path))
 		{
 			json = FunkinAssets.parseJson(FunkinAssets.getContent(path));

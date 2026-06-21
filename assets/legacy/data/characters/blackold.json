@@ -74,7 +74,7 @@
 	"image": "characters/story/black/retro",
 	"position": [
 		-340,
-		-30
+		-50
 	],
 	"dance_every": 2,
 	"gameover_intial_sound": null,

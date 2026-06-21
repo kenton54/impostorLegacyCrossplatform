@@ -164,7 +164,7 @@
 		-100
 	],
 	"gameover_loop_sound": null,
-	"sing_duration": 4,
+	"sing_duration": 3.7,
 	"scale": 1,
 	"_editor_isPlayer": false
 }

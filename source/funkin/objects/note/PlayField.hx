@@ -21,6 +21,8 @@ class PlayField extends FlxTypedContainer<StrumNote>
 	public var singers:Array<Null<Character>> = [];
 	public var quants(default, set):Bool = ClientPrefs.quants;
 	
+	public var hasChangedSkin:Bool = false;
+	
 	private function set_quants(value:Bool)
 	{
 		quants = value;
@@ -252,6 +254,8 @@ class PlayField extends FlxTypedContainer<StrumNote>
 		note.texture = _skin.noteTexture;
 		note.rgbEnabled = _skin.inEngineColoring;
 		note.rgbShader.enabled = note.rgbEnabled;
+		
+		if (hasChangedSkin) note.updateColors();
 		
 		note.baseScale.copyFrom(note.scale);
 		note.updateHitbox();
@@ -538,6 +542,67 @@ class PlayField extends FlxTypedContainer<StrumNote>
 	public inline function canInput():Bool
 	{
 		return (playerControls && inControl && !autoPlayed && (owner == null || !owner.stunned));
+	}
+	
+	public function changeSkin(newSkin:NoteSkin)
+	{
+		_skin = newSkin;
+		NoteUtil.noteskins[player] = newSkin;
+		
+		// that way it checks the colors and re-assigns
+		this.hasChangedSkin = true;
+		
+		forEachAlive((strum) -> {
+			strum.skin = _skin;
+			strum.texture = _skin.noteTexture;
+			strum.useRGBShader = _skin.inEngineColoring;
+			strum.rgbGraphics.enabled = strum.useRGBShader;
+			strum.reloadNote();
+			
+			strum.playAnim('static');
+			strum.resetAnim = 0;
+		});
+		
+		forEachAliveNote((note) -> {
+			note.skin = _skin;
+			note.texture = _skin.noteTexture;
+			note.rgbEnabled = _skin.inEngineColoring;
+			note.rgbGraphics.enabled = note.rgbEnabled;
+			note.loadNoteAnims();
+			
+			note.reloadNote('', note.texture, '');
+			
+			note.scale.set(_skin.noteScale, _skin.noteScale);
+			note.baseScale.copyFrom(note.scale);
+			
+			note.rgbGraphics = NoteUtil.getCurColors(note.noteData, note.quant, note.player);
+		});
+		
+		grpNoteSplashes.forEachAlive((splash) -> {
+			splash.scale.set(_skin.splashScale, _skin.splashScale);
+			splash.baseScale.copyFrom(splash.scale);
+			
+			splash.rgbGraphics.enabled = _skin.inEngineColoring;
+		});
+		grpSusSplashes.forEachAlive((splash) -> {
+			splash.scale.set(_skin.susSplashScale, _skin.susSplashScale);
+			splash.baseScale.copyFrom(splash.scale);
+			
+			splash.rgbGraphics.enabled = _skin.inEngineColoring;
+		});
+	}
+	
+	// just because
+	override public function toString():String
+	{
+		var str = 'keys: $keyCount, pos: [x: $baseX, y: $baseY], skin: ${_skin.name}';
+		
+		if (owner != null && singers.length > 0)
+		{
+			str += ', owner: ${owner?.curCharacter ?? 'dad'}, singers: ${[for (i in singers) (i?.curCharacter ?? 'null')]}';
+		}
+		
+		return '($str)';
 	}
 	
 	override function destroy()

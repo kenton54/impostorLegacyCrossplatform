@@ -48,7 +48,7 @@ class MarathonMenuState extends AmongUIState
 		initStateScript();
 		
 		detective = new FlxAnimate();
-		detective.frames = FlxAnimateFrames.fromAnimate(Paths.getPath('images/${ext}detective/base', null, true));
+		detective.frames = FlxAnimateFrames.fromAnimate(Paths.getPath('images/${ext}detective/base', NORMAL));
 		
 		detective.anim.addByFrameLabel('idle', 'idle', 24, true);
 		detective.anim.addByFrameLabel('talk', 'talk', 24, true);
@@ -61,7 +61,7 @@ class MarathonMenuState extends AmongUIState
 		add(detective);
 		
 		detectiveHands = new FlxAnimate();
-		detectiveHands.frames = FlxAnimateFrames.fromAnimate(Paths.getPath('images/${ext}detective/hands', null, true));
+		detectiveHands.frames = FlxAnimateFrames.fromAnimate(Paths.getPath('images/${ext}detective/hands', NORMAL));
 		detectiveHands.anim.addByFrameLabel('idle', 'idle', 24, true);
 		detectiveHands.anim.addByFrameLabel('1', '1', 24, false);
 		detectiveHands.anim.addByFrameLabel('2', '2', 24, false);
@@ -74,7 +74,7 @@ class MarathonMenuState extends AmongUIState
 		detectiveHands.updateHitbox();
 		
 		peekers = new FlxAnimate();
-		peekers.frames = FlxAnimateFrames.fromAnimate(Paths.getPath('images/${ext}/peekers', null, true));
+		peekers.frames = FlxAnimateFrames.fromAnimate(Paths.getPath('images/${ext}/peekers', NORMAL));
 		peekers.anim.addByFrameLabel('red', 'red', 24, false);
 		peekers.anim.addByFrameLabel('gray', 'gray', 24, false);
 		peekers.anim.addByFrameLabel('yellow', 'yellow', 24, false);

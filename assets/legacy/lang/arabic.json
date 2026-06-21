@@ -10,7 +10,8 @@
         "liber.ttf": "ar.ttf",
         "liberbold.ttf": "arBold.ttf",
         "ariblk.ttf": "arBold.ttf",
-        "AmaticSC-Bold.ttf": "ar.ttf"
+        "AmaticSC-Bold.ttf": "ar.ttf",
+		"apple_kid.ttf": "Handjet-VariableFont_ELGR,ELSH,wght.ttf"
     },
     "flags": {
     	"dialogueLeading": -22

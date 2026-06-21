@@ -21,6 +21,8 @@ class BeansPopup extends FlxSpriteGroup
 	{
 		super();
 		
+		amount = FlxMath.maxInt(0, amount); // no more negative money. im sorry.
+		
 		y -= 100;
 		lerpScore = amount;
 		
@@ -32,13 +34,13 @@ class BeansPopup extends FlxSpriteGroup
 			return;
 		}
 		
-		CosmicubeData.setMoney(currency, CosmicubeData.getMoney(currency) + FlxMath.maxInt(0, amount)); // no more negative money. im sorry.
+		CosmicubeData.setMoney(currency, CosmicubeData.getMoney(currency) + amount);
 		ClientPrefs.flush();
 		
 		anchorX = FlxG.width - 150;
 		anchorY = 50;
 		
-		bean = new FlxSprite(0, 0).loadGraphic(Paths.image('currency/$currency'));
+		bean = new FlxSprite(0, 0).loadGraphic(Paths.image('currency/$currency', LOOSE));
 		bean.antialiasing = ClientPrefs.globalAntialiasing;
 		bean.updateHitbox();
 		bean.scrollFactor.set();
@@ -63,8 +65,8 @@ class BeansPopup extends FlxSpriteGroup
 			
 			if (amount > 0)
 			{
-				var soundPath:String = (Paths.fileExists('sounds/get$currency.ogg') || Paths.fileExists('sounds/get$currency.wav') ? 'get$currency' : 'getbeans');
-				FlxG.sound.play(Paths.sound(soundPath), 0.9);
+				var soundPath:String = (Paths.fileExists('sounds/get$currency.ogg', LOOSE) || Paths.fileExists('sounds/get$currency.wav', LOOSE) ? 'get$currency' : 'getbeans');
+				FlxG.sound.play(Paths.sound(soundPath, LOOSE), 0.9);
 			}
 		});
 		

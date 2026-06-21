@@ -1,2 +1,3 @@
-call light out
-if value1 is 1 then dont work if flashingLights is off
+Functionality: stage/song
+turns on the lights
+- value1: if set to 1, then this event won't be called if photosensitivity is on

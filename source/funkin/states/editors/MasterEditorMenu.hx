@@ -16,8 +16,6 @@ import funkin.objects.*;
 class MasterEditorMenu extends MusicBeatState
 {
 	var options:Array<String> = [
-		// 'Week Editor',
-		// 'Menu Character Editor',
 		'Character Editor',
 		'Chart Editor',
 		'Chart Converter'
@@ -112,10 +110,6 @@ class MasterEditorMenu extends MusicBeatState
 			{
 				case 'Character Editor':
 					FlxG.switchState(() -> new CharacterEditorState(Character.DEFAULT_CHARACTER, false));
-				case 'Week Editor':
-					FlxG.switchState(() -> new WeekEditorState());
-				case 'Menu Character Editor':
-					FlxG.switchState(() -> new MenuCharacterEditorState());
 				case 'Chart Editor': // felt it would be cool maybe
 					FlxG.switchState(ChartEditorState.new);
 				case 'Chart Converter':

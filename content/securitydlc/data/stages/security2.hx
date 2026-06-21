@@ -89,15 +89,6 @@ function onCreatePost()
 	add(discuss);
 
 	refreshZ();
-
-	if (ClientPrefs.bfSkin == 'detectiveplayer')
-	{
-		triggerEventNote('Change Character', 'boyfriend', 'detectiveplayer');
-	}
-	if (ClientPrefs.bfSkin == 'bobby')
-	{
-		triggerEventNote('Change Character', 'bobby', 'detectiveplayer');
-	}
 }
 function onEvent(name, v1, v2)
 {

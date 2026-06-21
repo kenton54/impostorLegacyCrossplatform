@@ -1,0 +1,4 @@
+Functionality: global
+rotates the camera around on beat
+- value1: intensity 1
+- value2: intensity 2

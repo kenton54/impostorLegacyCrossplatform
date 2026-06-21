@@ -1,3 +1,4 @@
+Functionality: global
 changes camera modulo
-value 1: force
-value 2: beats
+- value 1: how hard camera bops
+- value 2: beat interval in which camera bops

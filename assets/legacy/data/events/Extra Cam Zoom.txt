@@ -1,4 +1,3 @@
-an addition to camera zoom without actually
-setting camera zoom or accounting for it
-basically just:
-defaultCamZoom + extraCamZoom
+Functionality: global
+adds an extra artifical zoom on top of the camera zoom
+- value 1: extraCamZoom, set to 0 to disable

@@ -18,6 +18,17 @@
 				0,
 				0
 			],
+			"anim": "ou",
+			"fps": 24,
+			"name": "ou",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
 			"anim": "idle-alt",
 			"fps": 24,
 			"name": "idalt",
@@ -30,6 +41,17 @@
 				0
 			],
 			"anim": "scared",
+			"fps": 24,
+			"name": "scared",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "blast",
 			"fps": 24,
 			"name": "scared",
 			"indices": []
@@ -201,7 +223,10 @@
 			"0xFFE3FF7E",
 			"0xFF009965"
 		],
-		"customMonotone": "LIMEGREENMonotone"
+		"variants": {
+			"monotone": "LIMEGREENMonotone",
+			"running": "LIMEGREENRunner"
+		}
 	},
 	"scalableOffsets": false,
 	"gameover_confirm_sound": null,
@@ -216,7 +241,7 @@
 		0
 	],
 	"gameover_loop_sound": null,
-	"sing_duration": 4,
+	"sing_duration": 6,
 	"scale": 1,
 	"_editor_isPlayer": true
 }
